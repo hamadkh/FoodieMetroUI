@@ -1,0 +1,13 @@
+c:\users\hamad\documents\visual studio 2017\Projects\Foodie\Foodie\bin\Debug\Foodie.exe.config
+c:\users\hamad\documents\visual studio 2017\Projects\Foodie\Foodie\bin\Debug\Foodie.exe
+c:\users\hamad\documents\visual studio 2017\Projects\Foodie\Foodie\bin\Debug\Foodie.pdb
+c:\users\hamad\documents\visual studio 2017\Projects\Foodie\Foodie\obj\Debug\Foodie.csprojResolveAssemblyReference.cache
+c:\users\hamad\documents\visual studio 2017\Projects\Foodie\Foodie\obj\Debug\Foodie.Properties.Resources.resources
+c:\users\hamad\documents\visual studio 2017\Projects\Foodie\Foodie\obj\Debug\Foodie.csproj.GenerateResource.Cache
+c:\users\hamad\documents\visual studio 2017\Projects\Foodie\Foodie\obj\Debug\Foodie.exe
+c:\users\hamad\documents\visual studio 2017\Projects\Foodie\Foodie\obj\Debug\Foodie.pdb
+c:\users\hamad\documents\visual studio 2017\Projects\Foodie\Foodie\obj\Debug\Foodie.Home.resources
+c:\users\hamad\documents\visual studio 2017\Projects\Foodie\Foodie\bin\Debug\MetroFramework.Design.dll
+c:\users\hamad\documents\visual studio 2017\Projects\Foodie\Foodie\bin\Debug\MetroFramework.dll
+c:\users\hamad\documents\visual studio 2017\Projects\Foodie\Foodie\bin\Debug\MetroFramework.Fonts.dll
+c:\users\hamad\documents\visual studio 2017\Projects\Foodie\Foodie\obj\Debug\Foodie.Bevrages.resources
