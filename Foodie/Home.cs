@@ -44,17 +44,14 @@ namespace Foodie
             this.BackColor = Color.Red;
         }
 
-        private void bevragesTile_Click(object sender, EventArgs e)
+        private void beveragesTile_Click(object sender, EventArgs e)
         {
-            using (Bevrages frm = new Bevrages())
-            {
-                frm.ShowDialog();
-            }
+            foodieTab.SelectTab(0);
         }
 
         private void winecTiles_Click(object sender, EventArgs e)
         {
-
+            foodieTab.SelectTab(1);
         }
 
         private void appatizersTile_Click(object sender, EventArgs e)
@@ -86,7 +83,6 @@ namespace Foodie
         {
 
         }
-
 
         /*
          * WinformUI common tools implementation  

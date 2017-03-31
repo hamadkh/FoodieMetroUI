@@ -54,12 +54,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bevrages.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bevrages.Designer.cs">
-      <DependentUpon>Bevrages.cs</DependentUpon>
-    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,9 +62,6 @@
     </Compile>
     <Compile Include="main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Bevrages.resx">
-      <DependentUpon>Bevrages.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>

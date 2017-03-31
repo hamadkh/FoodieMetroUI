@@ -31,8 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.btnExit = new MetroFramework.Controls.MetroButton();
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.bevragesTile = new MetroFramework.Controls.MetroTile();
-            this.metroToggle1 = new MetroFramework.Controls.MetroToggle();
+            this.beveragesTile = new MetroFramework.Controls.MetroTile();
             this.appatizersTile = new MetroFramework.Controls.MetroTile();
             this.EntreeTile = new MetroFramework.Controls.MetroTile();
             this.dessertsTile = new MetroFramework.Controls.MetroTile();
@@ -40,7 +39,17 @@
             this.winecTiles = new MetroFramework.Controls.MetroTile();
             this.kidsTile = new MetroFramework.Controls.MetroTile();
             this.sidesTile = new MetroFramework.Controls.MetroTile();
+            this.foodieTab = new MetroFramework.Controls.MetroTabControl();
+            this.bevTab = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
+            this.foodieTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnExit
@@ -59,28 +68,18 @@
             this.metroStyleManager1.Owner = this;
             this.metroStyleManager1.Style = MetroFramework.MetroColorStyle.Lime;
             // 
-            // bevragesTile
+            // beveragesTile
             // 
-            this.bevragesTile.ActiveControl = null;
-            this.bevragesTile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bevragesTile.Location = new System.Drawing.Point(23, 101);
-            this.bevragesTile.Name = "bevragesTile";
-            this.bevragesTile.Size = new System.Drawing.Size(116, 40);
-            this.bevragesTile.TabIndex = 4;
-            this.bevragesTile.Text = "Bevrages";
-            this.bevragesTile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bevragesTile.UseSelectable = true;
-            this.bevragesTile.Click += new System.EventHandler(this.bevragesTile_Click);
-            // 
-            // metroToggle1
-            // 
-            this.metroToggle1.AutoSize = true;
-            this.metroToggle1.Location = new System.Drawing.Point(1197, 28);
-            this.metroToggle1.Name = "metroToggle1";
-            this.metroToggle1.Size = new System.Drawing.Size(80, 17);
-            this.metroToggle1.TabIndex = 5;
-            this.metroToggle1.Text = "Off";
-            this.metroToggle1.UseSelectable = true;
+            this.beveragesTile.ActiveControl = null;
+            this.beveragesTile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.beveragesTile.Location = new System.Drawing.Point(23, 101);
+            this.beveragesTile.Name = "beveragesTile";
+            this.beveragesTile.Size = new System.Drawing.Size(116, 40);
+            this.beveragesTile.TabIndex = 4;
+            this.beveragesTile.Text = "Beverages";
+            this.beveragesTile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.beveragesTile.UseSelectable = true;
+            this.beveragesTile.Click += new System.EventHandler(this.beveragesTile_Click);
             // 
             // appatizersTile
             // 
@@ -173,11 +172,141 @@
             this.sidesTile.UseSelectable = true;
             this.sidesTile.Click += new System.EventHandler(this.sidesTile_Click);
             // 
+            // foodieTab
+            // 
+            this.foodieTab.Controls.Add(this.bevTab);
+            this.foodieTab.Controls.Add(this.metroTabPage2);
+            this.foodieTab.Controls.Add(this.metroTabPage1);
+            this.foodieTab.Controls.Add(this.metroTabPage3);
+            this.foodieTab.Controls.Add(this.metroTabPage4);
+            this.foodieTab.Controls.Add(this.metroTabPage5);
+            this.foodieTab.Controls.Add(this.metroTabPage6);
+            this.foodieTab.Controls.Add(this.metroTabPage7);
+            this.foodieTab.Location = new System.Drawing.Point(145, 12);
+            this.foodieTab.Name = "foodieTab";
+            this.foodieTab.SelectedIndex = 7;
+            this.foodieTab.Size = new System.Drawing.Size(943, 594);
+            this.foodieTab.TabIndex = 13;
+            this.foodieTab.UseSelectable = true;
+            // 
+            // bevTab
+            // 
+            this.bevTab.HorizontalScrollbarBarColor = true;
+            this.bevTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.bevTab.HorizontalScrollbarSize = 10;
+            this.bevTab.Location = new System.Drawing.Point(4, 38);
+            this.bevTab.Name = "bevTab";
+            this.bevTab.Size = new System.Drawing.Size(935, 552);
+            this.bevTab.TabIndex = 0;
+            this.bevTab.Text = "Beverages";
+            this.bevTab.VerticalScrollbarBarColor = true;
+            this.bevTab.VerticalScrollbarHighlightOnWheel = false;
+            this.bevTab.VerticalScrollbarSize = 10;
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(935, 552);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "Wine/Cocktails";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(935, 552);
+            this.metroTabPage1.TabIndex = 2;
+            this.metroTabPage1.Text = "Appatizers";
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
+            // metroTabPage3
+            // 
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.HorizontalScrollbarSize = 10;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(935, 552);
+            this.metroTabPage3.TabIndex = 3;
+            this.metroTabPage3.Text = "Entree";
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.VerticalScrollbarSize = 10;
+            // 
+            // metroTabPage4
+            // 
+            this.metroTabPage4.HorizontalScrollbarBarColor = true;
+            this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage4.HorizontalScrollbarSize = 10;
+            this.metroTabPage4.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage4.Name = "metroTabPage4";
+            this.metroTabPage4.Size = new System.Drawing.Size(935, 552);
+            this.metroTabPage4.TabIndex = 4;
+            this.metroTabPage4.Text = "Desserts";
+            this.metroTabPage4.VerticalScrollbarBarColor = true;
+            this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage4.VerticalScrollbarSize = 10;
+            // 
+            // metroTabPage5
+            // 
+            this.metroTabPage5.HorizontalScrollbarBarColor = true;
+            this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.HorizontalScrollbarSize = 10;
+            this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage5.Name = "metroTabPage5";
+            this.metroTabPage5.Size = new System.Drawing.Size(935, 552);
+            this.metroTabPage5.TabIndex = 5;
+            this.metroTabPage5.Text = "Salads";
+            this.metroTabPage5.VerticalScrollbarBarColor = true;
+            this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.VerticalScrollbarSize = 10;
+            // 
+            // metroTabPage6
+            // 
+            this.metroTabPage6.HorizontalScrollbarBarColor = true;
+            this.metroTabPage6.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage6.HorizontalScrollbarSize = 10;
+            this.metroTabPage6.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage6.Name = "metroTabPage6";
+            this.metroTabPage6.Size = new System.Drawing.Size(935, 552);
+            this.metroTabPage6.TabIndex = 6;
+            this.metroTabPage6.Text = "Kids";
+            this.metroTabPage6.VerticalScrollbarBarColor = true;
+            this.metroTabPage6.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage6.VerticalScrollbarSize = 10;
+            // 
+            // metroTabPage7
+            // 
+            this.metroTabPage7.HorizontalScrollbarBarColor = true;
+            this.metroTabPage7.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage7.HorizontalScrollbarSize = 10;
+            this.metroTabPage7.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage7.Name = "metroTabPage7";
+            this.metroTabPage7.Size = new System.Drawing.Size(935, 552);
+            this.metroTabPage7.TabIndex = 7;
+            this.metroTabPage7.Text = "Sides";
+            this.metroTabPage7.VerticalScrollbarBarColor = true;
+            this.metroTabPage7.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage7.VerticalScrollbarSize = 10;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1308, 629);
+            this.Controls.Add(this.foodieTab);
             this.Controls.Add(this.sidesTile);
             this.Controls.Add(this.kidsTile);
             this.Controls.Add(this.winecTiles);
@@ -185,15 +314,14 @@
             this.Controls.Add(this.dessertsTile);
             this.Controls.Add(this.EntreeTile);
             this.Controls.Add(this.appatizersTile);
-            this.Controls.Add(this.metroToggle1);
-            this.Controls.Add(this.bevragesTile);
+            this.Controls.Add(this.beveragesTile);
             this.Controls.Add(this.btnExit);
             this.Name = "Home";
             this.Text = "Foodie";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
+            this.foodieTab.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -201,8 +329,7 @@
 
         private MetroFramework.Controls.MetroButton btnExit;
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
-        private MetroFramework.Controls.MetroTile bevragesTile;
-        private MetroFramework.Controls.MetroToggle metroToggle1;
+        private MetroFramework.Controls.MetroTile beveragesTile;
         private MetroFramework.Controls.MetroTile sidesTile;
         private MetroFramework.Controls.MetroTile kidsTile;
         private MetroFramework.Controls.MetroTile winecTiles;
@@ -210,6 +337,15 @@
         private MetroFramework.Controls.MetroTile dessertsTile;
         private MetroFramework.Controls.MetroTile EntreeTile;
         private MetroFramework.Controls.MetroTile appatizersTile;
+        private MetroFramework.Controls.MetroTabControl foodieTab;
+        private MetroFramework.Controls.MetroTabPage bevTab;
+        private MetroFramework.Controls.MetroTabPage metroTabPage2;
+        private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private MetroFramework.Controls.MetroTabPage metroTabPage3;
+        private MetroFramework.Controls.MetroTabPage metroTabPage4;
+        private MetroFramework.Controls.MetroTabPage metroTabPage5;
+        private MetroFramework.Controls.MetroTabPage metroTabPage6;
+        private MetroFramework.Controls.MetroTabPage metroTabPage7;
     }
 }
 
