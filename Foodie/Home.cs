@@ -7,6 +7,12 @@ namespace Foodie
 {
     public partial class Home : MetroFramework.Forms.MetroForm
     {
+        /*
+         * Global Variables  
+         * 
+         */
+
+
         public Home()
         {
             InitializeComponent();
@@ -15,6 +21,7 @@ namespace Foodie
         private void Form1_Load(object sender, EventArgs e)
         {
             HomeSettings();
+
         }
 
         /*
@@ -31,14 +38,11 @@ namespace Foodie
             this.CancelButton = this.btnExit;
         }
 
-
-
-
-
         /*
          * MetroUI FrameWork tools implementations 
          */
-        private void btnExit_Click(object sender, EventArgs e)
+
+        private void btnExit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
             this.BackColor = Color.Red;
@@ -56,32 +60,32 @@ namespace Foodie
 
         private void appatizersTile_Click(object sender, EventArgs e)
         {
-
+            foodieTab.SelectTab(2);
         }
 
         private void EntreeTile_Click(object sender, EventArgs e)
         {
-
+            foodieTab.SelectTab(3);
         }
 
         private void dessertsTile_Click(object sender, EventArgs e)
         {
-
+            foodieTab.SelectTab(4);
         }
 
         private void saladsTile_Click(object sender, EventArgs e)
         {
-
+            foodieTab.SelectTab(5);
         }
 
         private void kidsTile_Click(object sender, EventArgs e)
         {
-
+            foodieTab.SelectTab(6);
         }
 
         private void sidesTile_Click(object sender, EventArgs e)
         {
-
+            foodieTab.SelectTab(7);
         }
 
         /*
