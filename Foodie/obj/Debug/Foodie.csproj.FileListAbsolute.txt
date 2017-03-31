@@ -22,3 +22,4 @@ C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\obj\Debug\Foodie.Properties
 C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\obj\Debug\Foodie.csproj.GenerateResource.Cache
 C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\obj\Debug\Foodie.exe
 C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\obj\Debug\Foodie.pdb
+C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\obj\Debug\Foodie.csprojResolveAssemblyReference.cache
