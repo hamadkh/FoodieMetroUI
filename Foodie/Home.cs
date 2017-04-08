@@ -32,7 +32,7 @@ namespace Foodie
 
         private void HomeSettings()
         {
-            WindowState = FormWindowState.Maximized;
+            //WindowState = FormWindowState.Maximized;
             Color color = ColorTranslator.FromHtml("#1a1a1a"); // this assumes an ARGB value 
             this.BackColor = color;
             this.CancelButton = this.btnExit;
@@ -53,39 +53,19 @@ namespace Foodie
             foodieTab.SelectTab(0);
         }
 
-        private void winecTiles_Click(object sender, EventArgs e)
+        private void appatizersTile_Click(object sender, EventArgs e)
         {
             foodieTab.SelectTab(1);
         }
 
-        private void appatizersTile_Click(object sender, EventArgs e)
+        private void EntreeTile_Click(object sender, EventArgs e)
         {
             foodieTab.SelectTab(2);
         }
 
-        private void EntreeTile_Click(object sender, EventArgs e)
-        {
-            foodieTab.SelectTab(3);
-        }
-
         private void dessertsTile_Click(object sender, EventArgs e)
         {
-            foodieTab.SelectTab(4);
-        }
-
-        private void saladsTile_Click(object sender, EventArgs e)
-        {
-            foodieTab.SelectTab(5);
-        }
-
-        private void kidsTile_Click(object sender, EventArgs e)
-        {
-            foodieTab.SelectTab(6);
-        }
-
-        private void sidesTile_Click(object sender, EventArgs e)
-        {
-            foodieTab.SelectTab(7);
+            foodieTab.SelectTab(3);
         }
 
         /*
