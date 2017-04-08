@@ -118,7 +118,7 @@
             this.foodieTab.Location = new System.Drawing.Point(145, 65);
             this.foodieTab.Margin = new System.Windows.Forms.Padding(5);
             this.foodieTab.Name = "foodieTab";
-            this.foodieTab.SelectedIndex = 1;
+            this.foodieTab.SelectedIndex = 0;
             this.foodieTab.Size = new System.Drawing.Size(868, 565);
             this.foodieTab.Style = MetroFramework.MetroColorStyle.Orange;
             this.foodieTab.TabIndex = 13;
@@ -132,7 +132,7 @@
             this.bevTab.HorizontalScrollbarSize = 10;
             this.bevTab.Location = new System.Drawing.Point(4, 38);
             this.bevTab.Name = "bevTab";
-            this.bevTab.Size = new System.Drawing.Size(815, 523);
+            this.bevTab.Size = new System.Drawing.Size(860, 523);
             this.bevTab.TabIndex = 0;
             this.bevTab.VerticalScrollbarBarColor = true;
             this.bevTab.VerticalScrollbarHighlightOnWheel = false;
@@ -158,7 +158,7 @@
             this.metroTabPage1.HorizontalScrollbarSize = 10;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(815, 523);
+            this.metroTabPage1.Size = new System.Drawing.Size(860, 523);
             this.metroTabPage1.TabIndex = 2;
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
@@ -171,7 +171,7 @@
             this.metroTabPage3.HorizontalScrollbarSize = 10;
             this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(815, 523);
+            this.metroTabPage3.Size = new System.Drawing.Size(860, 523);
             this.metroTabPage3.TabIndex = 3;
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
@@ -184,7 +184,7 @@
             this.metroTabPage4.HorizontalScrollbarSize = 10;
             this.metroTabPage4.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(815, 523);
+            this.metroTabPage4.Size = new System.Drawing.Size(860, 523);
             this.metroTabPage4.TabIndex = 4;
             this.metroTabPage4.VerticalScrollbarBarColor = true;
             this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
@@ -197,7 +197,7 @@
             this.metroTabPage5.HorizontalScrollbarSize = 10;
             this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(815, 523);
+            this.metroTabPage5.Size = new System.Drawing.Size(860, 523);
             this.metroTabPage5.TabIndex = 5;
             this.metroTabPage5.VerticalScrollbarBarColor = true;
             this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
@@ -210,7 +210,7 @@
             this.metroTabPage6.HorizontalScrollbarSize = 10;
             this.metroTabPage6.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage6.Name = "metroTabPage6";
-            this.metroTabPage6.Size = new System.Drawing.Size(815, 523);
+            this.metroTabPage6.Size = new System.Drawing.Size(860, 523);
             this.metroTabPage6.TabIndex = 6;
             this.metroTabPage6.VerticalScrollbarBarColor = true;
             this.metroTabPage6.VerticalScrollbarHighlightOnWheel = false;
@@ -223,7 +223,7 @@
             this.metroTabPage7.HorizontalScrollbarSize = 10;
             this.metroTabPage7.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage7.Name = "metroTabPage7";
-            this.metroTabPage7.Size = new System.Drawing.Size(815, 523);
+            this.metroTabPage7.Size = new System.Drawing.Size(860, 523);
             this.metroTabPage7.TabIndex = 7;
             this.metroTabPage7.VerticalScrollbarBarColor = true;
             this.metroTabPage7.VerticalScrollbarHighlightOnWheel = false;
