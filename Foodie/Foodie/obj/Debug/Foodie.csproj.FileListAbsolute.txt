@@ -1,0 +1,12 @@
+C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\bin\Debug\Foodie.exe.config
+C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\bin\Debug\Foodie.exe
+C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\bin\Debug\Foodie.pdb
+C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\bin\Debug\MetroFramework.Design.dll
+C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\bin\Debug\MetroFramework.dll
+C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\obj\Debug\Foodie.csprojResolveAssemblyReference.cache
+C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\obj\Debug\Foodie.Home.resources
+C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\obj\Debug\Foodie.Properties.Resources.resources
+C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\obj\Debug\Foodie.csproj.GenerateResource.Cache
+C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\obj\Debug\Foodie.exe
+C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\obj\Debug\Foodie.pdb
