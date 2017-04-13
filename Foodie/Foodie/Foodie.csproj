@@ -73,6 +73,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -87,6 +88,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lemonade.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ginger-ale.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iced tea.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-wine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coca-cola.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
