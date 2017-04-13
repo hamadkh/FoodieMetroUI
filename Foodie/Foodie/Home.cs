@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace Foodie
 {
@@ -19,6 +20,8 @@ namespace Foodie
         */
         private void Home_Load(object sender, EventArgs e)
         {
+            Color color = ColorTranslator.FromHtml("#ffffff"); // this assumes an ARGB value 
+            orderListView.BackColor = color;
             menuTab.SelectTab(0);
         }
 

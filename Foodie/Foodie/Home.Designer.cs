@@ -52,7 +52,7 @@
             this.addbtnWhite = new MetroFramework.Controls.MetroButton();
             this.addbtnWine = new MetroFramework.Controls.MetroButton();
             this.addbtnCoke = new MetroFramework.Controls.MetroButton();
-            this.metroListView1 = new MetroFramework.Controls.MetroListView();
+            this.orderListView = new MetroFramework.Controls.MetroListView();
             this.removeBtn = new MetroFramework.Controls.MetroTile();
             this.menuTab.SuspendLayout();
             this.bevTab.SuspendLayout();
@@ -335,19 +335,20 @@
             this.addbtnCoke.UseSelectable = true;
             this.addbtnCoke.Click += new System.EventHandler(this.addbtnCoke_Click);
             // 
-            // metroListView1
+            // orderListView
             // 
-            this.metroListView1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.metroListView1.FullRowSelect = true;
-            this.metroListView1.Location = new System.Drawing.Point(1068, 45);
-            this.metroListView1.Name = "metroListView1";
-            this.metroListView1.OwnerDraw = true;
-            this.metroListView1.Size = new System.Drawing.Size(293, 543);
-            this.metroListView1.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroListView1.TabIndex = 6;
-            this.metroListView1.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroListView1.UseCompatibleStateImageBehavior = false;
-            this.metroListView1.UseSelectable = true;
+            this.orderListView.BackColor = System.Drawing.Color.White;
+            this.orderListView.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.orderListView.FullRowSelect = true;
+            this.orderListView.Location = new System.Drawing.Point(1068, 50);
+            this.orderListView.Name = "orderListView";
+            this.orderListView.OwnerDraw = true;
+            this.orderListView.Size = new System.Drawing.Size(293, 538);
+            this.orderListView.Style = MetroFramework.MetroColorStyle.Red;
+            this.orderListView.TabIndex = 6;
+            this.orderListView.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.orderListView.UseCompatibleStateImageBehavior = false;
+            this.orderListView.UseSelectable = true;
             // 
             // removeBtn
             // 
@@ -368,7 +369,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1368, 670);
             this.Controls.Add(this.removeBtn);
-            this.Controls.Add(this.metroListView1);
+            this.Controls.Add(this.orderListView);
             this.Controls.Add(this.waiterTile);
             this.Controls.Add(this.dessertTile);
             this.Controls.Add(this.entTile);
@@ -416,7 +417,7 @@
         private MetroFramework.Controls.MetroButton addbtnWhite;
         private MetroFramework.Controls.MetroButton addbtnIceTea;
         private MetroFramework.Controls.MetroButton btnaddGinger;
-        private MetroFramework.Controls.MetroListView metroListView1;
+        private MetroFramework.Controls.MetroListView orderListView;
         private MetroFramework.Controls.MetroTile removeBtn;
     }
 }
