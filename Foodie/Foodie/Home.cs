@@ -23,6 +23,9 @@ namespace Foodie
             Color color = ColorTranslator.FromHtml("#ffffff"); // this assumes an ARGB value 
             orderListView.BackColor = color;
             menuTab.SelectTab(0);
+            waiterSpinner.Visible = false;
+            waiterlbl.Visible = false;
+            reqbtnComplete.Visible = false;
         }
 
         private void bevTile_Click(object sender, EventArgs e)
@@ -183,5 +186,61 @@ namespace Foodie
         {
 
         }
+
+        /* Waiter stuff
+         */
+
+        private void waiterTile_Click(object sender, EventArgs e)
+        {
+            menuTab.SelectTab(4);
+        }
+
+        private void callbtnWaiter_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Random waittime = new Random();
+                int time = waittime.Next(1, 6);
+                if (checkRefill.Checked == true || otherCheck.Checked == true || checkNapkins.Checked == true || saltpeppCheck.Checked == true)
+                {
+                    disableRequests();
+                    waiterSpinner.Visible = true;
+                    waiterlbl.Text = "Your request has been sent \nThe waiter will be at your table in " + time + " min" + "\n Press button below after waiter has arrived.";
+                    waiterlbl.Visible = true;
+                    reqbtnComplete.Visible = true;
+                }
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+
+        private void disableRequests()
+        {
+            checkNapkins.Enabled = false;
+            checkRefill.Enabled = false;
+            otherCheck.Enabled = false;
+            saltpeppCheck.Enabled = false;
+            callbtnWaiter.Enabled = false;
+        }
+        private void EnableRequests()
+        {
+            checkNapkins.Enabled = true;
+            checkRefill.Enabled = true;
+            otherCheck.Enabled = true;
+            saltpeppCheck.Enabled = true;
+            callbtnWaiter.Enabled = true;
+        }
+
+        private void reqbtnComplete_Click(object sender, EventArgs e)
+        {
+            EnableRequests();
+            waiterlbl.Visible = false;
+            waiterSpinner.Visible = false;
+            reqbtnComplete.Visible = false;
+        }
+
+        /********************************** END OF WAITER STUFF ************************************************/
     }
 }
