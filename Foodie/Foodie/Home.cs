@@ -45,24 +45,27 @@ namespace Foodie
             menuTab.SelectTab(3);
         }
 
-        /* Add to Order buttons 
-         */
+        /* Remove button for order
+        */
+        private void removeBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /* Add buttons for order bevrages
+        */
+
         private void addbtnLemonade_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnaddGinger_Click(object sender, EventArgs e)
+        private void addbtnGingerale_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void addbtnIceTea_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void addbtnWhite_Click(object sender, EventArgs e)
+        private void addbtnIcetea_Click(object sender, EventArgs e)
         {
 
         }
@@ -72,14 +75,111 @@ namespace Foodie
 
         }
 
+        private void addbtnRedwine_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void addbtnCoke_Click(object sender, EventArgs e)
         {
 
         }
 
-        /* Remove button for order
+        /* Add buttons for order Appatizers
         */
-        private void removeBtn_Click(object sender, EventArgs e)
+
+        private void addbtnCalazone_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addbtnFettuccine_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addbtnNoodles_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addbtnPizza_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addbtnSpaghetti_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addbtnSquid_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /* Add buttons for order Desserts
+        */
+
+        private void addbtnbrownie_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addbtnCakebb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addbtnChurros_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addbtnCreampuff_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addbtnOrangecake_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addbtnItalianCake_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /* Add buttons for order Entree
+        */
+
+        private void addbtnCalamari_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addbtnChicken_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addbtnMeatball_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addbtnPastries_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addbtnShrimp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addbtnTomatoes_Click(object sender, EventArgs e)
         {
 
         }

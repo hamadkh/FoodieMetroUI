@@ -10,3 +10,4 @@ C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\obj\Debug\Foodie.Pro
 C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\obj\Debug\Foodie.csproj.GenerateResource.Cache
 C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\obj\Debug\Foodie.exe
 C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\obj\Debug\Foodie.pdb
+C:\Users\Hamad\Documents\GitHub\FoodieMetroUI\Foodie\Foodie\bin\Debug\MaterialSkin.dll

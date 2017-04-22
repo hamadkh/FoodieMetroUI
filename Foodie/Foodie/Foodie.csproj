@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -106,6 +109,72 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\coca-cola.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calamari.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chicken.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meatball-ravioli.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastries.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shrimps.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tomatoes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calzone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fettuccine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noodles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spaghetti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\squid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brownie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cake.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\churros.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cream-puff.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dessert.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italian-food.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tables-app-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_add-to-order %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
