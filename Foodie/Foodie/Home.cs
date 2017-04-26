@@ -28,6 +28,11 @@ namespace Foodie
         private double priceNoodlesSep = 9.99;
         private double priceSquid = 16.99;
 
+        /* Totals */
+        private double totalSum = 0;
+        private double totalTax = 0;
+        private double totalSubtotal = 0;
+        public readonly double taxrate = 6.99; 
 
         public Home()
         {
@@ -45,7 +50,6 @@ namespace Foodie
             waiterSpinner.Visible = false;
             waiterlbl.Visible = false;
             reqbtnComplete.Visible = false;
-
         }
 
         private void bevTile_Click(object sender, EventArgs e)
@@ -76,39 +80,51 @@ namespace Foodie
             {
                 orderListView.Items.Remove(eachItem);
             }
+            totalCalculations();
         }
 
+        private void btnclearListbox_Click(object sender, EventArgs e)
+        {
+            orderListView.Items.Clear();
+            totalCalculations();
+        }
         /* Add buttons for order bevrages
         */
 
         private void addbtnLemonade_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] {"Lemonade", priceNonAlcBev.ToString("$0.00")}));
+            orderListView.Items.Add(new ListViewItem(new string[] {"Lemonade", priceNonAlcBev.ToString("0.00")}));
+            totalCalculations();
         }
 
         private void addbtnGingerale_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Gingerale", priceNonAlcBev.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Gingerale", priceNonAlcBev.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnIcetea_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Ice Tea", priceNonAlcBev.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Ice Tea", priceNonAlcBev.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnWine_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Wine", priceWine.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Wine", priceWine.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnRedwine_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Wine", priceWine.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Wine", priceWine.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnCoke_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Coke", priceNonAlcBev.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Coke", priceNonAlcBev.ToString("0.00") }));
+            totalCalculations();
         }
 
         /* Add buttons for order Entree
@@ -116,32 +132,38 @@ namespace Foodie
 
         private void addbtnCalazone_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Calazone", priceCalazone.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Calazone", priceCalazone.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnFettuccine_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Fettuccine", priceFetticuni.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Fettuccine", priceFetticuni.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnNoodles_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Noodles", priceNoodlesSep.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Noodles", priceNoodlesSep.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnPizza_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Pizza", pricePizza.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Pizza", pricePizza.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnSpaghetti_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Spagettie", priceNoodlesSep.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Spagettie", priceNoodlesSep.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnSquid_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Squid", priceSquid.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Squid", priceSquid.ToString("0.00") }));
+            totalCalculations();
         }
 
         /* Add buttons for order Desserts
@@ -149,32 +171,38 @@ namespace Foodie
 
         private void addbtnbrownie_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Brownie", priceCake.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Brownie", priceCake.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnCakebb_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Blue Berry Cake", priceCake.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Blue Berry Cake", priceCake.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnChurros_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Churros", priceChurrosCreampuffs.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Churros", priceChurrosCreampuffs.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnCreampuff_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Cream Puffs", priceChurrosCreampuffs.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Cream Puffs", priceChurrosCreampuffs.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnOrangecake_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Orange Cake", priceCake.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Orange Cake", priceCake.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnItalianCake_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Italian Cake", priceCake.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Italian Cake", priceCake.ToString("0.00") }));
+            totalCalculations();
         }
 
 
@@ -182,32 +210,38 @@ namespace Foodie
         */
         private void addbtnMeatball_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Ravioli", priceRavioli.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Ravioli", priceRavioli.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnCalamari_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Calamari", priceCalWingShrimp.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Calamari", priceCalWingShrimp.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnChicken_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Wings", priceCalWingShrimp.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Wings", priceCalWingShrimp.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnShrimp_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Shrimp", priceCalWingShrimp.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Shrimp", priceCalWingShrimp.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void addbtnTomatoes_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Tomatoes", priceBreadTomato.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Tomatoes", priceBreadTomato.ToString("0.00") }));
+            totalCalculations();
         }
 
         private void btnBreadapp_Click(object sender, EventArgs e)
         {
-            orderListView.Items.Add(new ListViewItem(new string[] { "Calamari", priceBreadTomato.ToString("$0.00") }));
+            orderListView.Items.Add(new ListViewItem(new string[] { "Calamari", priceBreadTomato.ToString("0.00") }));
+            totalCalculations();
         }
 
         /* Waiter stuff
@@ -263,7 +297,46 @@ namespace Foodie
             waiterSpinner.Visible = false;
             reqbtnComplete.Visible = false;
         }
-
         /********************************** END OF WAITER STUFF ************************************************/
+
+        private void totalCalculations()
+        {
+            double value = 0;
+            totalSum = 0;
+            try
+            {
+                foreach (ListViewItem o in orderListView.Items)
+                {
+                    if (double.TryParse(o.SubItems[1].Text, out value))
+                    {
+                        totalSum += value;
+                    }
+
+                }
+
+                lbltotalcalc.Text = totalSum.ToString("$0.00");
+
+                totalTax = Tax(totalSum);
+                lbltaxcalc.Text = totalTax.ToString("$0.00");
+
+                totalSubtotal = totalSum + totalTax;
+                lblsubtotalcalc.Text = totalSubtotal.ToString("$0.00");
+
+            }
+            catch (Exception)
+            {
+
+          
+            }
+          
+        }
+
+        private double Tax(double total)
+        {
+            double taxedamount=0;
+            taxedamount = (total / 100) * taxrate;
+            return taxedamount;
+        }
+
     }
 }

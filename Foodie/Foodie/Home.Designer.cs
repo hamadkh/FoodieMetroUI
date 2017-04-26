@@ -45,6 +45,7 @@
             this.lemonPic = new System.Windows.Forms.PictureBox();
             this.materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
             this.appTab = new MetroFramework.Controls.MetroTabPage();
+            this.btnBreadapp = new MaterialSkin.Controls.MaterialRaisedButton();
             this.addbtnShrimp = new MaterialSkin.Controls.MaterialRaisedButton();
             this.addbtnTomatoes = new MaterialSkin.Controls.MaterialRaisedButton();
             this.addbtnMeatball = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -94,6 +95,7 @@
             this.otherCheck = new MaterialSkin.Controls.MaterialCheckBox();
             this.checkRefill = new MaterialSkin.Controls.MaterialCheckBox();
             this.waiterSpinner = new MetroFramework.Controls.MetroProgressSpinner();
+            this.materialDivider6 = new MaterialSkin.Controls.MaterialDivider();
             this.bevTile = new MetroFramework.Controls.MetroTile();
             this.appTile = new MetroFramework.Controls.MetroTile();
             this.entTile = new MetroFramework.Controls.MetroTile();
@@ -106,8 +108,13 @@
             this.removeBtn = new MetroFramework.Controls.MetroTile();
             this.logoFoodie = new System.Windows.Forms.PictureBox();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
-            this.btnBreadapp = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialDivider6 = new MaterialSkin.Controls.MaterialDivider();
+            this.lbltotal = new MetroFramework.Controls.MetroLabel();
+            this.lbltotalcalc = new MetroFramework.Controls.MetroLabel();
+            this.lbltax = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.lbltaxcalc = new MetroFramework.Controls.MetroLabel();
+            this.lblsubtotalcalc = new MetroFramework.Controls.MetroLabel();
+            this.btnclearListbox = new MetroFramework.Controls.MetroTile();
             this.menuTab.SuspendLayout();
             this.bevTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cokePic)).BeginInit();
@@ -151,7 +158,7 @@
             this.menuTab.Controls.Add(this.waiterTab);
             this.menuTab.Location = new System.Drawing.Point(150, 50);
             this.menuTab.Name = "menuTab";
-            this.menuTab.SelectedIndex = 4;
+            this.menuTab.SelectedIndex = 0;
             this.menuTab.Size = new System.Drawing.Size(859, 612);
             this.menuTab.Style = MetroFramework.MetroColorStyle.Blue;
             this.menuTab.TabIndex = 0;
@@ -360,6 +367,19 @@
             this.appTab.VerticalScrollbarBarColor = true;
             this.appTab.VerticalScrollbarHighlightOnWheel = false;
             this.appTab.VerticalScrollbarSize = 10;
+            // 
+            // btnBreadapp
+            // 
+            this.btnBreadapp.Depth = 0;
+            this.btnBreadapp.Location = new System.Drawing.Point(26, 516);
+            this.btnBreadapp.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnBreadapp.Name = "btnBreadapp";
+            this.btnBreadapp.Primary = true;
+            this.btnBreadapp.Size = new System.Drawing.Size(266, 42);
+            this.btnBreadapp.TabIndex = 13;
+            this.btnBreadapp.Text = "ADD TO ORDER";
+            this.btnBreadapp.UseVisualStyleBackColor = true;
+            this.btnBreadapp.Click += new System.EventHandler(this.btnBreadapp_Click);
             // 
             // addbtnShrimp
             // 
@@ -913,7 +933,7 @@
             // checkNapkins
             // 
             this.checkNapkins.Depth = 0;
-            this.checkNapkins.Font = new System.Drawing.Font("Roboto", 10F);
+            this.checkNapkins.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.checkNapkins.Location = new System.Drawing.Point(52, 73);
             this.checkNapkins.Margin = new System.Windows.Forms.Padding(0);
             this.checkNapkins.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -928,7 +948,7 @@
             // saltpeppCheck
             // 
             this.saltpeppCheck.Depth = 0;
-            this.saltpeppCheck.Font = new System.Drawing.Font("Roboto", 10F);
+            this.saltpeppCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.saltpeppCheck.Location = new System.Drawing.Point(52, 129);
             this.saltpeppCheck.Margin = new System.Windows.Forms.Padding(0);
             this.saltpeppCheck.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -943,7 +963,7 @@
             // otherCheck
             // 
             this.otherCheck.Depth = 0;
-            this.otherCheck.Font = new System.Drawing.Font("Roboto", 10F);
+            this.otherCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.otherCheck.Location = new System.Drawing.Point(52, 191);
             this.otherCheck.Margin = new System.Windows.Forms.Padding(0);
             this.otherCheck.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -958,7 +978,7 @@
             // checkRefill
             // 
             this.checkRefill.Depth = 0;
-            this.checkRefill.Font = new System.Drawing.Font("Roboto", 10F);
+            this.checkRefill.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.checkRefill.Location = new System.Drawing.Point(52, 25);
             this.checkRefill.Margin = new System.Windows.Forms.Padding(0);
             this.checkRefill.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -979,6 +999,17 @@
             this.waiterSpinner.Style = MetroFramework.MetroColorStyle.Green;
             this.waiterSpinner.TabIndex = 2;
             this.waiterSpinner.UseSelectable = true;
+            // 
+            // materialDivider6
+            // 
+            this.materialDivider6.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.materialDivider6.Depth = 0;
+            this.materialDivider6.Location = new System.Drawing.Point(-53, 384);
+            this.materialDivider6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider6.Name = "materialDivider6";
+            this.materialDivider6.Size = new System.Drawing.Size(1026, 186);
+            this.materialDivider6.TabIndex = 11;
+            this.materialDivider6.Text = "materialDivider6";
             // 
             // bevTile
             // 
@@ -1070,7 +1101,7 @@
             this.orderListView.Location = new System.Drawing.Point(1040, 112);
             this.orderListView.Name = "orderListView";
             this.orderListView.OwnerDraw = true;
-            this.orderListView.Size = new System.Drawing.Size(293, 451);
+            this.orderListView.Size = new System.Drawing.Size(293, 419);
             this.orderListView.Style = MetroFramework.MetroColorStyle.Blue;
             this.orderListView.TabIndex = 6;
             this.orderListView.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -1086,7 +1117,7 @@
             // colprice
             // 
             this.colprice.Text = "PRICE";
-            this.colprice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.colprice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colprice.Width = 145;
             // 
             // removeBtn
@@ -1094,7 +1125,7 @@
             this.removeBtn.ActiveControl = null;
             this.removeBtn.Location = new System.Drawing.Point(1040, 604);
             this.removeBtn.Name = "removeBtn";
-            this.removeBtn.Size = new System.Drawing.Size(293, 43);
+            this.removeBtn.Size = new System.Drawing.Size(131, 43);
             this.removeBtn.Style = MetroFramework.MetroColorStyle.Green;
             this.removeBtn.TabIndex = 7;
             this.removeBtn.Text = "REMOVE ITEM";
@@ -1123,35 +1154,86 @@
             this.materialDivider1.TabIndex = 9;
             this.materialDivider1.Text = "materialDivider1";
             // 
-            // btnBreadapp
+            // lbltotal
             // 
-            this.btnBreadapp.Depth = 0;
-            this.btnBreadapp.Location = new System.Drawing.Point(26, 516);
-            this.btnBreadapp.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnBreadapp.Name = "btnBreadapp";
-            this.btnBreadapp.Primary = true;
-            this.btnBreadapp.Size = new System.Drawing.Size(266, 42);
-            this.btnBreadapp.TabIndex = 13;
-            this.btnBreadapp.Text = "ADD TO ORDER";
-            this.btnBreadapp.UseVisualStyleBackColor = true;
-            this.btnBreadapp.Click += new System.EventHandler(this.btnBreadapp_Click);
+            this.lbltotal.AutoSize = true;
+            this.lbltotal.Location = new System.Drawing.Point(1040, 538);
+            this.lbltotal.Name = "lbltotal";
+            this.lbltotal.Size = new System.Drawing.Size(36, 19);
+            this.lbltotal.TabIndex = 11;
+            this.lbltotal.Text = "Total";
             // 
-            // materialDivider6
+            // lbltotalcalc
             // 
-            this.materialDivider6.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.materialDivider6.Depth = 0;
-            this.materialDivider6.Location = new System.Drawing.Point(-53, 384);
-            this.materialDivider6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider6.Name = "materialDivider6";
-            this.materialDivider6.Size = new System.Drawing.Size(1026, 186);
-            this.materialDivider6.TabIndex = 11;
-            this.materialDivider6.Text = "materialDivider6";
+            this.lbltotalcalc.AutoSize = true;
+            this.lbltotalcalc.Location = new System.Drawing.Point(1281, 538);
+            this.lbltotalcalc.Name = "lbltotalcalc";
+            this.lbltotalcalc.Size = new System.Drawing.Size(40, 19);
+            this.lbltotalcalc.TabIndex = 12;
+            this.lbltotalcalc.Text = "$0.00";
+            // 
+            // lbltax
+            // 
+            this.lbltax.AutoSize = true;
+            this.lbltax.Location = new System.Drawing.Point(1040, 557);
+            this.lbltax.Name = "lbltax";
+            this.lbltax.Size = new System.Drawing.Size(27, 19);
+            this.lbltax.TabIndex = 13;
+            this.lbltax.Text = "Tax";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(1040, 582);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(64, 19);
+            this.metroLabel1.TabIndex = 14;
+            this.metroLabel1.Text = "Sub-Total";
+            // 
+            // lbltaxcalc
+            // 
+            this.lbltaxcalc.AutoSize = true;
+            this.lbltaxcalc.Location = new System.Drawing.Point(1281, 557);
+            this.lbltaxcalc.Name = "lbltaxcalc";
+            this.lbltaxcalc.Size = new System.Drawing.Size(40, 19);
+            this.lbltaxcalc.TabIndex = 15;
+            this.lbltaxcalc.Text = "$0.00";
+            // 
+            // lblsubtotalcalc
+            // 
+            this.lblsubtotalcalc.AutoSize = true;
+            this.lblsubtotalcalc.Location = new System.Drawing.Point(1281, 582);
+            this.lblsubtotalcalc.Name = "lblsubtotalcalc";
+            this.lblsubtotalcalc.Size = new System.Drawing.Size(40, 19);
+            this.lblsubtotalcalc.TabIndex = 16;
+            this.lblsubtotalcalc.Text = "$0.00";
+            // 
+            // btnclearListbox
+            // 
+            this.btnclearListbox.ActiveControl = null;
+            this.btnclearListbox.Location = new System.Drawing.Point(1221, 604);
+            this.btnclearListbox.Name = "btnclearListbox";
+            this.btnclearListbox.Size = new System.Drawing.Size(112, 43);
+            this.btnclearListbox.Style = MetroFramework.MetroColorStyle.Green;
+            this.btnclearListbox.TabIndex = 17;
+            this.btnclearListbox.Text = "CLEAR ALL";
+            this.btnclearListbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnclearListbox.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnclearListbox.UseSelectable = true;
+            this.btnclearListbox.Click += new System.EventHandler(this.btnclearListbox_Click);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1368, 670);
+            this.Controls.Add(this.btnclearListbox);
+            this.Controls.Add(this.lblsubtotalcalc);
+            this.Controls.Add(this.lbltaxcalc);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.lbltax);
+            this.Controls.Add(this.lbltotalcalc);
+            this.Controls.Add(this.lbltotal);
             this.Controls.Add(this.logoFoodie);
             this.Controls.Add(this.removeBtn);
             this.Controls.Add(this.orderListView);
@@ -1199,6 +1281,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoFoodie)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1283,6 +1366,13 @@
         private System.Windows.Forms.ColumnHeader colprice;
         private MaterialSkin.Controls.MaterialRaisedButton btnBreadapp;
         private MaterialSkin.Controls.MaterialDivider materialDivider6;
+        private MetroFramework.Controls.MetroLabel lblsubtotalcalc;
+        private MetroFramework.Controls.MetroLabel lbltaxcalc;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lbltax;
+        private MetroFramework.Controls.MetroLabel lbltotalcalc;
+        private MetroFramework.Controls.MetroLabel lbltotal;
+        private MetroFramework.Controls.MetroTile btnclearListbox;
     }
 }
 
