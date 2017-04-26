@@ -1,0 +1,15 @@
+Table No: 1
+Total: 22.425104
+Total payed with Tip: 
+ListViewSubItem: {6.50}
+ListViewItem: {Wine}
+ListViewSubItem: {6.50}
+ListViewItem: {Wine}
+ListViewSubItem: {1.99}
+ListViewItem: {Gingerale}
+ListViewSubItem: {1.99}
+ListViewItem: {Lemonade}
+ListViewSubItem: {1.99}
+ListViewItem: {Ice Tea}
+ListViewSubItem: {1.99}
+ListViewItem: {Coke}

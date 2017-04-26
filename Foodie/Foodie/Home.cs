@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Foodie
@@ -11,6 +12,10 @@ namespace Foodie
          * 
          */
 
+        /* table details*/
+        private int tableNum = 1;
+
+        
         /*Bevrages price*/
         private double priceNonAlcBev = 1.99;
         private double priceWine = 6.50;
@@ -40,6 +45,7 @@ namespace Foodie
         private bool _TypedIntoCard;
         private bool _TypedIntoName;
         private bool _TypedIntoZip;
+        private bool _TypedIntoPhone;
 
         public Home()
         {
@@ -51,6 +57,7 @@ namespace Foodie
         */
         private void Home_Load(object sender, EventArgs e)
         {
+            var time = DateTime.Now;
             Color color = ColorTranslator.FromHtml("#ffffff"); // this assumes an ARGB value 
             orderListView.BackColor = color;
             menuTab.SelectTab(0);
@@ -97,12 +104,13 @@ namespace Foodie
             cardtxtBox.Text = "Card Number";
             zipcode.Text = "Zip code";
             cvvtxtBox.Text = "CVV/CVC";
+            phonetxt.Text = "Phone Number";
 
             _TypedIntoCVV= _TypedIntoCard =_TypedIntoName = _TypedIntoZip=false;
 
             lblPaytotal.Text = totalSubtotal.ToString("$0.00");
 
-    }
+        }
 
         /*****************************************************END OF CHECK OUT FUNCTIONALITY**************************************/
 
@@ -446,6 +454,23 @@ namespace Foodie
             if (!_TypedIntoZip) { zipcode.Text = ""; }
         }
 
+        private void phonetxt_Click(object sender, EventArgs e)
+        {
+            if (!_TypedIntoPhone) { phonetxt.Text = ""; }
+        }
+
+        private void phonetxt_TextChanged(object sender, EventArgs e)
+        {
+            _TypedIntoPhone = !String.IsNullOrEmpty(phonetxt.Text);
+
+        }
+
+        private void phonetxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            _TypedIntoPhone = true;
+        }
+
         private void cvvtxtBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (cvvtxtBox.Text.Length == 0) return;
@@ -469,5 +494,65 @@ namespace Foodie
                 MessageBox.Show("CVV is only 4-digits");
             }
         }
+
+        private void payTile_Click(object sender, EventArgs e)
+        {
+
+            if ((zipcode.Text != "" || cvvtxtBox.Text != "" || fullnametxtBox.Text != "" || cardtxtBox.Text != ""
+                || yearCombo.Text != "" || monthCombo.Text != "") && totalSubtotal!=0)
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want complete this transaction ?", "Clear", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    MessageBox.Show("Yor receipt will be texted to you! Thankyou !");
+                    endSession();
+                }
+            }
+            else
+            {
+                MessageBox.Show("You have no amount to be paid!");
+            }
+        }
+
+        /*ORDER STUFF*/
+        private void orderTile_Click(object sender, EventArgs e)
+        {
+            if (orderListView.Items.Count == 0)
+            {
+                MessageBox.Show("Please order atleast 1 item before placing order !!");
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to place the Order?", "Clear", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    menuTab.SelectTab(6);
+                }
+            }
+        }
+
+        /*********************************************************************END OF ORDER ***********************************************************************/
+
+        private void endSession()
+        {
+            string filename =  "receipt"+ tableNum + ".txt";
+            using (StreamWriter writetext = new StreamWriter(filename))
+            {
+                writetext.WriteLine("Table No: "+tableNum);
+                writetext.WriteLine("Total: " + totalSubtotal);
+                writetext.WriteLine("Total payed with Tip: ");
+            
+                    foreach (ListViewItem o in orderListView.Items)
+                    {
+                        writetext.WriteLine(o.ToString());
+                        writetext.WriteLine(o.SubItems[1]);
+                    }
+            }
+            tableNum++;
+            menuTab.SelectTab(0);
+            orderListView.Items.Clear();
+            totalCalculations();
+        }
+
     }
 }

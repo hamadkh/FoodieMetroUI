@@ -125,6 +125,9 @@
             this.btnclearListbox = new MetroFramework.Controls.MetroTile();
             this.checkOutTile = new MetroFramework.Controls.MetroTile();
             this.lblPaytotal = new MetroFramework.Controls.MetroLabel();
+            this.orderTile = new MetroFramework.Controls.MetroTile();
+            this.orderTab = new MetroFramework.Controls.MetroTabPage();
+            this.phonetxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.menuTab.SuspendLayout();
             this.bevTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cokePic)).BeginInit();
@@ -168,9 +171,10 @@
             this.menuTab.Controls.Add(this.dessertTab);
             this.menuTab.Controls.Add(this.waiterTab);
             this.menuTab.Controls.Add(this.checkoutTab);
+            this.menuTab.Controls.Add(this.orderTab);
             this.menuTab.Location = new System.Drawing.Point(150, 51);
             this.menuTab.Name = "menuTab";
-            this.menuTab.SelectedIndex = 3;
+            this.menuTab.SelectedIndex = 5;
             this.menuTab.Size = new System.Drawing.Size(859, 611);
             this.menuTab.Style = MetroFramework.MetroColorStyle.Green;
             this.menuTab.TabIndex = 0;
@@ -1025,6 +1029,7 @@
             // 
             // checkoutTab
             // 
+            this.checkoutTab.Controls.Add(this.phonetxt);
             this.checkoutTab.Controls.Add(this.lblPaytotal);
             this.checkoutTab.Controls.Add(this.payTile);
             this.checkoutTab.Controls.Add(this.yearCombo);
@@ -1047,7 +1052,7 @@
             // payTile
             // 
             this.payTile.ActiveControl = null;
-            this.payTile.Location = new System.Drawing.Point(189, 308);
+            this.payTile.Location = new System.Drawing.Point(187, 455);
             this.payTile.Name = "payTile";
             this.payTile.Size = new System.Drawing.Size(490, 57);
             this.payTile.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1058,6 +1063,7 @@
             this.payTile.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.payTile.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.payTile.UseSelectable = true;
+            this.payTile.Click += new System.EventHandler(this.payTile_Click);
             // 
             // yearCombo
             // 
@@ -1065,6 +1071,7 @@
             this.yearCombo.ItemHeight = 23;
             this.yearCombo.Location = new System.Drawing.Point(561, 254);
             this.yearCombo.Name = "yearCombo";
+            this.yearCombo.PromptText = "YYYY";
             this.yearCombo.Size = new System.Drawing.Size(118, 29);
             this.yearCombo.TabIndex = 8;
             this.yearCombo.UseSelectable = true;
@@ -1075,6 +1082,7 @@
             this.monthCombo.ItemHeight = 23;
             this.monthCombo.Location = new System.Drawing.Point(425, 254);
             this.monthCombo.Name = "monthCombo";
+            this.monthCombo.PromptText = "MM";
             this.monthCombo.Size = new System.Drawing.Size(114, 29);
             this.monthCombo.TabIndex = 7;
             this.monthCombo.UseSelectable = true;
@@ -1259,7 +1267,7 @@
             this.orderListView.Location = new System.Drawing.Point(1040, 112);
             this.orderListView.Name = "orderListView";
             this.orderListView.OwnerDraw = true;
-            this.orderListView.Size = new System.Drawing.Size(293, 419);
+            this.orderListView.Size = new System.Drawing.Size(293, 337);
             this.orderListView.Style = MetroFramework.MetroColorStyle.Green;
             this.orderListView.TabIndex = 6;
             this.orderListView.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -1281,7 +1289,7 @@
             // removeBtn
             // 
             this.removeBtn.ActiveControl = null;
-            this.removeBtn.Location = new System.Drawing.Point(1040, 604);
+            this.removeBtn.Location = new System.Drawing.Point(1041, 548);
             this.removeBtn.Name = "removeBtn";
             this.removeBtn.Size = new System.Drawing.Size(131, 43);
             this.removeBtn.Style = MetroFramework.MetroColorStyle.Green;
@@ -1315,7 +1323,7 @@
             // lbltotal
             // 
             this.lbltotal.AutoSize = true;
-            this.lbltotal.Location = new System.Drawing.Point(1040, 538);
+            this.lbltotal.Location = new System.Drawing.Point(1041, 466);
             this.lbltotal.Name = "lbltotal";
             this.lbltotal.Size = new System.Drawing.Size(36, 19);
             this.lbltotal.TabIndex = 11;
@@ -1324,7 +1332,7 @@
             // lbltotalcalc
             // 
             this.lbltotalcalc.AutoSize = true;
-            this.lbltotalcalc.Location = new System.Drawing.Point(1281, 538);
+            this.lbltotalcalc.Location = new System.Drawing.Point(1282, 466);
             this.lbltotalcalc.Name = "lbltotalcalc";
             this.lbltotalcalc.Size = new System.Drawing.Size(40, 19);
             this.lbltotalcalc.TabIndex = 12;
@@ -1333,7 +1341,7 @@
             // lbltax
             // 
             this.lbltax.AutoSize = true;
-            this.lbltax.Location = new System.Drawing.Point(1040, 557);
+            this.lbltax.Location = new System.Drawing.Point(1041, 485);
             this.lbltax.Name = "lbltax";
             this.lbltax.Size = new System.Drawing.Size(27, 19);
             this.lbltax.TabIndex = 13;
@@ -1342,7 +1350,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(1040, 582);
+            this.metroLabel1.Location = new System.Drawing.Point(1041, 510);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(64, 19);
             this.metroLabel1.TabIndex = 14;
@@ -1351,7 +1359,7 @@
             // lbltaxcalc
             // 
             this.lbltaxcalc.AutoSize = true;
-            this.lbltaxcalc.Location = new System.Drawing.Point(1281, 557);
+            this.lbltaxcalc.Location = new System.Drawing.Point(1282, 485);
             this.lbltaxcalc.Name = "lbltaxcalc";
             this.lbltaxcalc.Size = new System.Drawing.Size(40, 19);
             this.lbltaxcalc.TabIndex = 15;
@@ -1360,7 +1368,7 @@
             // lblsubtotalcalc
             // 
             this.lblsubtotalcalc.AutoSize = true;
-            this.lblsubtotalcalc.Location = new System.Drawing.Point(1281, 582);
+            this.lblsubtotalcalc.Location = new System.Drawing.Point(1282, 510);
             this.lblsubtotalcalc.Name = "lblsubtotalcalc";
             this.lblsubtotalcalc.Size = new System.Drawing.Size(40, 19);
             this.lblsubtotalcalc.TabIndex = 16;
@@ -1369,7 +1377,7 @@
             // btnclearListbox
             // 
             this.btnclearListbox.ActiveControl = null;
-            this.btnclearListbox.Location = new System.Drawing.Point(1221, 604);
+            this.btnclearListbox.Location = new System.Drawing.Point(1221, 548);
             this.btnclearListbox.Name = "btnclearListbox";
             this.btnclearListbox.Size = new System.Drawing.Size(112, 43);
             this.btnclearListbox.Style = MetroFramework.MetroColorStyle.Green;
@@ -1408,11 +1416,61 @@
             this.lblPaytotal.TabIndex = 10;
             this.lblPaytotal.Text = "$0.00";
             // 
+            // orderTile
+            // 
+            this.orderTile.ActiveControl = null;
+            this.orderTile.Location = new System.Drawing.Point(1040, 606);
+            this.orderTile.Name = "orderTile";
+            this.orderTile.Size = new System.Drawing.Size(293, 52);
+            this.orderTile.TabIndex = 19;
+            this.orderTile.Text = "ORDER";
+            this.orderTile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.orderTile.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.orderTile.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.orderTile.UseSelectable = true;
+            this.orderTile.Click += new System.EventHandler(this.orderTile_Click);
+            // 
+            // orderTab
+            // 
+            this.orderTab.HorizontalScrollbarBarColor = true;
+            this.orderTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.orderTab.HorizontalScrollbarSize = 10;
+            this.orderTab.Location = new System.Drawing.Point(4, 38);
+            this.orderTab.Name = "orderTab";
+            this.orderTab.Size = new System.Drawing.Size(851, 569);
+            this.orderTab.TabIndex = 6;
+            this.orderTab.VerticalScrollbarBarColor = true;
+            this.orderTab.VerticalScrollbarHighlightOnWheel = false;
+            this.orderTab.VerticalScrollbarSize = 10;
+            // 
+            // phonetxt
+            // 
+            this.phonetxt.BackColor = System.Drawing.Color.White;
+            this.phonetxt.Depth = 0;
+            this.phonetxt.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phonetxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.phonetxt.Hint = "";
+            this.phonetxt.Location = new System.Drawing.Point(189, 311);
+            this.phonetxt.MouseState = MaterialSkin.MouseState.HOVER;
+            this.phonetxt.Name = "phonetxt";
+            this.phonetxt.PasswordChar = '\0';
+            this.phonetxt.SelectedText = "";
+            this.phonetxt.SelectionLength = 0;
+            this.phonetxt.SelectionStart = 0;
+            this.phonetxt.Size = new System.Drawing.Size(490, 23);
+            this.phonetxt.TabIndex = 11;
+            this.phonetxt.Text = "Phone Number";
+            this.phonetxt.UseSystemPasswordChar = false;
+            this.phonetxt.Click += new System.EventHandler(this.phonetxt_Click);
+            this.phonetxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phonetxt_KeyPress);
+            this.phonetxt.TextChanged += new System.EventHandler(this.phonetxt_TextChanged);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1368, 670);
+            this.Controls.Add(this.orderTile);
             this.Controls.Add(this.checkOutTile);
             this.Controls.Add(this.btnclearListbox);
             this.Controls.Add(this.lblsubtotalcalc);
@@ -1571,6 +1629,9 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField cardtxtBox;
         private MetroFramework.Controls.MetroTile payTile;
         private MetroFramework.Controls.MetroLabel lblPaytotal;
+        private MetroFramework.Controls.MetroTabPage orderTab;
+        private MetroFramework.Controls.MetroTile orderTile;
+        private MaterialSkin.Controls.MaterialSingleLineTextField phonetxt;
     }
 }
 
