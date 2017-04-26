@@ -96,6 +96,14 @@
             this.checkRefill = new MaterialSkin.Controls.MaterialCheckBox();
             this.waiterSpinner = new MetroFramework.Controls.MetroProgressSpinner();
             this.materialDivider6 = new MaterialSkin.Controls.MaterialDivider();
+            this.checkoutTab = new MetroFramework.Controls.MetroTabPage();
+            this.payTile = new MetroFramework.Controls.MetroTile();
+            this.yearCombo = new MetroFramework.Controls.MetroComboBox();
+            this.monthCombo = new MetroFramework.Controls.MetroComboBox();
+            this.zipcode = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.cvvtxtBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.cardtxtBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.fullnametxtBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.bevTile = new MetroFramework.Controls.MetroTile();
             this.appTile = new MetroFramework.Controls.MetroTile();
             this.entTile = new MetroFramework.Controls.MetroTile();
@@ -115,6 +123,8 @@
             this.lbltaxcalc = new MetroFramework.Controls.MetroLabel();
             this.lblsubtotalcalc = new MetroFramework.Controls.MetroLabel();
             this.btnclearListbox = new MetroFramework.Controls.MetroTile();
+            this.checkOutTile = new MetroFramework.Controls.MetroTile();
+            this.lblPaytotal = new MetroFramework.Controls.MetroLabel();
             this.menuTab.SuspendLayout();
             this.bevTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cokePic)).BeginInit();
@@ -145,6 +155,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bluecakePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chocakePic)).BeginInit();
             this.waiterTab.SuspendLayout();
+            this.checkoutTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoFoodie)).BeginInit();
             this.SuspendLayout();
@@ -156,11 +167,12 @@
             this.menuTab.Controls.Add(this.entreeTab);
             this.menuTab.Controls.Add(this.dessertTab);
             this.menuTab.Controls.Add(this.waiterTab);
-            this.menuTab.Location = new System.Drawing.Point(150, 50);
+            this.menuTab.Controls.Add(this.checkoutTab);
+            this.menuTab.Location = new System.Drawing.Point(150, 51);
             this.menuTab.Name = "menuTab";
-            this.menuTab.SelectedIndex = 0;
-            this.menuTab.Size = new System.Drawing.Size(859, 612);
-            this.menuTab.Style = MetroFramework.MetroColorStyle.Blue;
+            this.menuTab.SelectedIndex = 3;
+            this.menuTab.Size = new System.Drawing.Size(859, 611);
+            this.menuTab.Style = MetroFramework.MetroColorStyle.Green;
             this.menuTab.TabIndex = 0;
             this.menuTab.UseSelectable = true;
             // 
@@ -184,7 +196,7 @@
             this.bevTab.HorizontalScrollbarSize = 10;
             this.bevTab.Location = new System.Drawing.Point(4, 38);
             this.bevTab.Name = "bevTab";
-            this.bevTab.Size = new System.Drawing.Size(851, 570);
+            this.bevTab.Size = new System.Drawing.Size(851, 569);
             this.bevTab.TabIndex = 0;
             this.bevTab.Theme = MetroFramework.MetroThemeStyle.Light;
             this.bevTab.VerticalScrollbarBarColor = true;
@@ -362,7 +374,7 @@
             this.appTab.HorizontalScrollbarSize = 10;
             this.appTab.Location = new System.Drawing.Point(4, 38);
             this.appTab.Name = "appTab";
-            this.appTab.Size = new System.Drawing.Size(851, 570);
+            this.appTab.Size = new System.Drawing.Size(851, 569);
             this.appTab.TabIndex = 1;
             this.appTab.VerticalScrollbarBarColor = true;
             this.appTab.VerticalScrollbarHighlightOnWheel = false;
@@ -537,7 +549,7 @@
             this.entreeTab.HorizontalScrollbarSize = 10;
             this.entreeTab.Location = new System.Drawing.Point(4, 38);
             this.entreeTab.Name = "entreeTab";
-            this.entreeTab.Size = new System.Drawing.Size(851, 570);
+            this.entreeTab.Size = new System.Drawing.Size(851, 569);
             this.entreeTab.TabIndex = 2;
             this.entreeTab.VerticalScrollbarBarColor = true;
             this.entreeTab.VerticalScrollbarHighlightOnWheel = false;
@@ -712,7 +724,7 @@
             this.dessertTab.HorizontalScrollbarSize = 10;
             this.dessertTab.Location = new System.Drawing.Point(4, 38);
             this.dessertTab.Name = "dessertTab";
-            this.dessertTab.Size = new System.Drawing.Size(851, 570);
+            this.dessertTab.Size = new System.Drawing.Size(851, 569);
             this.dessertTab.TabIndex = 3;
             this.dessertTab.VerticalScrollbarBarColor = true;
             this.dessertTab.VerticalScrollbarHighlightOnWheel = false;
@@ -883,7 +895,7 @@
             this.waiterTab.HorizontalScrollbarSize = 10;
             this.waiterTab.Location = new System.Drawing.Point(4, 38);
             this.waiterTab.Name = "waiterTab";
-            this.waiterTab.Size = new System.Drawing.Size(851, 570);
+            this.waiterTab.Size = new System.Drawing.Size(851, 569);
             this.waiterTab.TabIndex = 4;
             this.waiterTab.VerticalScrollbarBarColor = true;
             this.waiterTab.VerticalScrollbarHighlightOnWheel = false;
@@ -933,7 +945,7 @@
             // checkNapkins
             // 
             this.checkNapkins.Depth = 0;
-            this.checkNapkins.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.checkNapkins.Font = new System.Drawing.Font("Roboto", 10F);
             this.checkNapkins.Location = new System.Drawing.Point(52, 73);
             this.checkNapkins.Margin = new System.Windows.Forms.Padding(0);
             this.checkNapkins.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -948,7 +960,7 @@
             // saltpeppCheck
             // 
             this.saltpeppCheck.Depth = 0;
-            this.saltpeppCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.saltpeppCheck.Font = new System.Drawing.Font("Roboto", 10F);
             this.saltpeppCheck.Location = new System.Drawing.Point(52, 129);
             this.saltpeppCheck.Margin = new System.Windows.Forms.Padding(0);
             this.saltpeppCheck.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -963,7 +975,7 @@
             // otherCheck
             // 
             this.otherCheck.Depth = 0;
-            this.otherCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.otherCheck.Font = new System.Drawing.Font("Roboto", 10F);
             this.otherCheck.Location = new System.Drawing.Point(52, 191);
             this.otherCheck.Margin = new System.Windows.Forms.Padding(0);
             this.otherCheck.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -978,7 +990,7 @@
             // checkRefill
             // 
             this.checkRefill.Depth = 0;
-            this.checkRefill.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.checkRefill.Font = new System.Drawing.Font("Roboto", 10F);
             this.checkRefill.Location = new System.Drawing.Point(52, 25);
             this.checkRefill.Margin = new System.Windows.Forms.Padding(0);
             this.checkRefill.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -1011,12 +1023,158 @@
             this.materialDivider6.TabIndex = 11;
             this.materialDivider6.Text = "materialDivider6";
             // 
+            // checkoutTab
+            // 
+            this.checkoutTab.Controls.Add(this.lblPaytotal);
+            this.checkoutTab.Controls.Add(this.payTile);
+            this.checkoutTab.Controls.Add(this.yearCombo);
+            this.checkoutTab.Controls.Add(this.monthCombo);
+            this.checkoutTab.Controls.Add(this.zipcode);
+            this.checkoutTab.Controls.Add(this.cvvtxtBox);
+            this.checkoutTab.Controls.Add(this.cardtxtBox);
+            this.checkoutTab.Controls.Add(this.fullnametxtBox);
+            this.checkoutTab.HorizontalScrollbarBarColor = true;
+            this.checkoutTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.checkoutTab.HorizontalScrollbarSize = 10;
+            this.checkoutTab.Location = new System.Drawing.Point(4, 38);
+            this.checkoutTab.Name = "checkoutTab";
+            this.checkoutTab.Size = new System.Drawing.Size(851, 569);
+            this.checkoutTab.TabIndex = 5;
+            this.checkoutTab.VerticalScrollbarBarColor = true;
+            this.checkoutTab.VerticalScrollbarHighlightOnWheel = false;
+            this.checkoutTab.VerticalScrollbarSize = 10;
+            // 
+            // payTile
+            // 
+            this.payTile.ActiveControl = null;
+            this.payTile.Location = new System.Drawing.Point(189, 308);
+            this.payTile.Name = "payTile";
+            this.payTile.Size = new System.Drawing.Size(490, 57);
+            this.payTile.Style = MetroFramework.MetroColorStyle.Blue;
+            this.payTile.TabIndex = 9;
+            this.payTile.Text = "PAY";
+            this.payTile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.payTile.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.payTile.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.payTile.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.payTile.UseSelectable = true;
+            // 
+            // yearCombo
+            // 
+            this.yearCombo.FormattingEnabled = true;
+            this.yearCombo.ItemHeight = 23;
+            this.yearCombo.Location = new System.Drawing.Point(561, 254);
+            this.yearCombo.Name = "yearCombo";
+            this.yearCombo.Size = new System.Drawing.Size(118, 29);
+            this.yearCombo.TabIndex = 8;
+            this.yearCombo.UseSelectable = true;
+            // 
+            // monthCombo
+            // 
+            this.monthCombo.FormattingEnabled = true;
+            this.monthCombo.ItemHeight = 23;
+            this.monthCombo.Location = new System.Drawing.Point(425, 254);
+            this.monthCombo.Name = "monthCombo";
+            this.monthCombo.Size = new System.Drawing.Size(114, 29);
+            this.monthCombo.TabIndex = 7;
+            this.monthCombo.UseSelectable = true;
+            // 
+            // zipcode
+            // 
+            this.zipcode.BackColor = System.Drawing.Color.White;
+            this.zipcode.Depth = 0;
+            this.zipcode.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zipcode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.zipcode.Hint = "";
+            this.zipcode.Location = new System.Drawing.Point(425, 198);
+            this.zipcode.MouseState = MaterialSkin.MouseState.HOVER;
+            this.zipcode.Name = "zipcode";
+            this.zipcode.PasswordChar = '\0';
+            this.zipcode.SelectedText = "";
+            this.zipcode.SelectionLength = 0;
+            this.zipcode.SelectionStart = 0;
+            this.zipcode.Size = new System.Drawing.Size(254, 23);
+            this.zipcode.TabIndex = 5;
+            this.zipcode.Text = "Zip code";
+            this.zipcode.UseSystemPasswordChar = false;
+            this.zipcode.Click += new System.EventHandler(this.zipcode_Click);
+            this.zipcode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.zipcode_KeyPress);
+            this.zipcode.TextChanged += new System.EventHandler(this.zipcode_TextChanged);
+            this.zipcode.Validating += new System.ComponentModel.CancelEventHandler(this.zipcode_Validating);
+            // 
+            // cvvtxtBox
+            // 
+            this.cvvtxtBox.BackColor = System.Drawing.Color.White;
+            this.cvvtxtBox.Depth = 0;
+            this.cvvtxtBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cvvtxtBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cvvtxtBox.Hint = "";
+            this.cvvtxtBox.Location = new System.Drawing.Point(191, 198);
+            this.cvvtxtBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cvvtxtBox.Name = "cvvtxtBox";
+            this.cvvtxtBox.PasswordChar = '\0';
+            this.cvvtxtBox.SelectedText = "";
+            this.cvvtxtBox.SelectionLength = 0;
+            this.cvvtxtBox.SelectionStart = 0;
+            this.cvvtxtBox.Size = new System.Drawing.Size(208, 23);
+            this.cvvtxtBox.TabIndex = 4;
+            this.cvvtxtBox.Text = "CVV/CVC";
+            this.cvvtxtBox.UseSystemPasswordChar = false;
+            this.cvvtxtBox.Click += new System.EventHandler(this.cvvtxtBox_Click);
+            this.cvvtxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cvvtxtBox_KeyPress);
+            this.cvvtxtBox.TextChanged += new System.EventHandler(this.cvvtxtBox_TextChanged);
+            this.cvvtxtBox.Validating += new System.ComponentModel.CancelEventHandler(this.cvvtxtBox_Validating);
+            // 
+            // cardtxtBox
+            // 
+            this.cardtxtBox.BackColor = System.Drawing.Color.White;
+            this.cardtxtBox.Depth = 0;
+            this.cardtxtBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardtxtBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cardtxtBox.Hint = "";
+            this.cardtxtBox.Location = new System.Drawing.Point(189, 133);
+            this.cardtxtBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cardtxtBox.Name = "cardtxtBox";
+            this.cardtxtBox.PasswordChar = '\0';
+            this.cardtxtBox.SelectedText = "";
+            this.cardtxtBox.SelectionLength = 0;
+            this.cardtxtBox.SelectionStart = 0;
+            this.cardtxtBox.Size = new System.Drawing.Size(488, 23);
+            this.cardtxtBox.TabIndex = 3;
+            this.cardtxtBox.Text = "Card number";
+            this.cardtxtBox.UseSystemPasswordChar = false;
+            this.cardtxtBox.Click += new System.EventHandler(this.cardtxtBox_Click);
+            this.cardtxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cardtxtBox_KeyPress);
+            this.cardtxtBox.TextChanged += new System.EventHandler(this.cardtxtBox_TextChanged);
+            // 
+            // fullnametxtBox
+            // 
+            this.fullnametxtBox.BackColor = System.Drawing.Color.White;
+            this.fullnametxtBox.Depth = 0;
+            this.fullnametxtBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullnametxtBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.fullnametxtBox.Hint = "";
+            this.fullnametxtBox.Location = new System.Drawing.Point(191, 85);
+            this.fullnametxtBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.fullnametxtBox.Name = "fullnametxtBox";
+            this.fullnametxtBox.PasswordChar = '\0';
+            this.fullnametxtBox.SelectedText = "";
+            this.fullnametxtBox.SelectionLength = 0;
+            this.fullnametxtBox.SelectionStart = 0;
+            this.fullnametxtBox.Size = new System.Drawing.Size(486, 23);
+            this.fullnametxtBox.TabIndex = 2;
+            this.fullnametxtBox.Text = "Full name";
+            this.fullnametxtBox.UseSystemPasswordChar = false;
+            this.fullnametxtBox.Click += new System.EventHandler(this.fullnametxtBox_Click);
+            this.fullnametxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fullnametxtBox_KeyPress);
+            this.fullnametxtBox.TextChanged += new System.EventHandler(this.fullnametxtBox_TextChanged);
+            // 
             // bevTile
             // 
             this.bevTile.ActiveControl = null;
-            this.bevTile.Location = new System.Drawing.Point(28, 112);
+            this.bevTile.Location = new System.Drawing.Point(26, 87);
             this.bevTile.Name = "bevTile";
-            this.bevTile.Size = new System.Drawing.Size(118, 93);
+            this.bevTile.Size = new System.Drawing.Size(118, 81);
             this.bevTile.Style = MetroFramework.MetroColorStyle.Green;
             this.bevTile.TabIndex = 1;
             this.bevTile.Text = "Bevrages";
@@ -1028,9 +1186,9 @@
             // appTile
             // 
             this.appTile.ActiveControl = null;
-            this.appTile.Location = new System.Drawing.Point(29, 211);
+            this.appTile.Location = new System.Drawing.Point(27, 174);
             this.appTile.Name = "appTile";
-            this.appTile.Size = new System.Drawing.Size(117, 98);
+            this.appTile.Size = new System.Drawing.Size(117, 84);
             this.appTile.Style = MetroFramework.MetroColorStyle.Green;
             this.appTile.TabIndex = 2;
             this.appTile.Text = "Appetizers";
@@ -1042,9 +1200,9 @@
             // entTile
             // 
             this.entTile.ActiveControl = null;
-            this.entTile.Location = new System.Drawing.Point(29, 315);
+            this.entTile.Location = new System.Drawing.Point(27, 264);
             this.entTile.Name = "entTile";
-            this.entTile.Size = new System.Drawing.Size(117, 103);
+            this.entTile.Size = new System.Drawing.Size(117, 83);
             this.entTile.Style = MetroFramework.MetroColorStyle.Green;
             this.entTile.TabIndex = 3;
             this.entTile.Text = "Entrees";
@@ -1056,9 +1214,9 @@
             // dessertTile
             // 
             this.dessertTile.ActiveControl = null;
-            this.dessertTile.Location = new System.Drawing.Point(28, 424);
+            this.dessertTile.Location = new System.Drawing.Point(27, 353);
             this.dessertTile.Name = "dessertTile";
-            this.dessertTile.Size = new System.Drawing.Size(118, 107);
+            this.dessertTile.Size = new System.Drawing.Size(118, 80);
             this.dessertTile.Style = MetroFramework.MetroColorStyle.Green;
             this.dessertTile.TabIndex = 4;
             this.dessertTile.Text = "Desserts";
@@ -1071,9 +1229,9 @@
             // 
             this.waiterTile.ActiveControl = null;
             this.waiterTile.BackColor = System.Drawing.Color.White;
-            this.waiterTile.Location = new System.Drawing.Point(28, 538);
+            this.waiterTile.Location = new System.Drawing.Point(27, 439);
             this.waiterTile.Name = "waiterTile";
-            this.waiterTile.Size = new System.Drawing.Size(118, 88);
+            this.waiterTile.Size = new System.Drawing.Size(118, 79);
             this.waiterTile.Style = MetroFramework.MetroColorStyle.Green;
             this.waiterTile.TabIndex = 5;
             this.waiterTile.Text = "Waiter";
@@ -1102,7 +1260,7 @@
             this.orderListView.Name = "orderListView";
             this.orderListView.OwnerDraw = true;
             this.orderListView.Size = new System.Drawing.Size(293, 419);
-            this.orderListView.Style = MetroFramework.MetroColorStyle.Blue;
+            this.orderListView.Style = MetroFramework.MetroColorStyle.Green;
             this.orderListView.TabIndex = 6;
             this.orderListView.Theme = MetroFramework.MetroThemeStyle.Light;
             this.orderListView.UseCompatibleStateImageBehavior = false;
@@ -1222,11 +1380,40 @@
             this.btnclearListbox.UseSelectable = true;
             this.btnclearListbox.Click += new System.EventHandler(this.btnclearListbox_Click);
             // 
+            // checkOutTile
+            // 
+            this.checkOutTile.ActiveControl = null;
+            this.checkOutTile.Location = new System.Drawing.Point(27, 524);
+            this.checkOutTile.Name = "checkOutTile";
+            this.checkOutTile.Size = new System.Drawing.Size(117, 77);
+            this.checkOutTile.Style = MetroFramework.MetroColorStyle.Blue;
+            this.checkOutTile.TabIndex = 18;
+            this.checkOutTile.Text = "Check Out";
+            this.checkOutTile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkOutTile.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.checkOutTile.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkOutTile.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.checkOutTile.UseSelectable = true;
+            this.checkOutTile.Click += new System.EventHandler(this.checkOutTile_Click);
+            // 
+            // lblPaytotal
+            // 
+            this.lblPaytotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lblPaytotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblPaytotal.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblPaytotal.Location = new System.Drawing.Point(189, 254);
+            this.lblPaytotal.Name = "lblPaytotal";
+            this.lblPaytotal.Size = new System.Drawing.Size(210, 29);
+            this.lblPaytotal.Style = MetroFramework.MetroColorStyle.Teal;
+            this.lblPaytotal.TabIndex = 10;
+            this.lblPaytotal.Text = "$0.00";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1368, 670);
+            this.Controls.Add(this.checkOutTile);
             this.Controls.Add(this.btnclearListbox);
             this.Controls.Add(this.lblsubtotalcalc);
             this.Controls.Add(this.lbltaxcalc);
@@ -1278,6 +1465,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chocakePic)).EndInit();
             this.waiterTab.ResumeLayout(false);
             this.waiterTab.PerformLayout();
+            this.checkoutTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoFoodie)).EndInit();
             this.ResumeLayout(false);
@@ -1373,6 +1561,16 @@
         private MetroFramework.Controls.MetroLabel lbltotalcalc;
         private MetroFramework.Controls.MetroLabel lbltotal;
         private MetroFramework.Controls.MetroTile btnclearListbox;
+        private MetroFramework.Controls.MetroTabPage checkoutTab;
+        private MetroFramework.Controls.MetroTile checkOutTile;
+        private MaterialSkin.Controls.MaterialSingleLineTextField fullnametxtBox;
+        private MetroFramework.Controls.MetroComboBox yearCombo;
+        private MetroFramework.Controls.MetroComboBox monthCombo;
+        private MaterialSkin.Controls.MaterialSingleLineTextField zipcode;
+        private MaterialSkin.Controls.MaterialSingleLineTextField cvvtxtBox;
+        private MaterialSkin.Controls.MaterialSingleLineTextField cardtxtBox;
+        private MetroFramework.Controls.MetroTile payTile;
+        private MetroFramework.Controls.MetroLabel lblPaytotal;
     }
 }
 

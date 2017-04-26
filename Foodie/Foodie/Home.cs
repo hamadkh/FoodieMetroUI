@@ -32,7 +32,14 @@ namespace Foodie
         private double totalSum = 0;
         private double totalTax = 0;
         private double totalSubtotal = 0;
-        public readonly double taxrate = 6.99; 
+        public readonly double taxrate = 6.99;
+
+        /*Events variables*/
+
+        private bool _TypedIntoCVV;
+        private bool _TypedIntoCard;
+        private bool _TypedIntoName;
+        private bool _TypedIntoZip;
 
         public Home()
         {
@@ -50,6 +57,16 @@ namespace Foodie
             waiterSpinner.Visible = false;
             waiterlbl.Visible = false;
             reqbtnComplete.Visible = false;
+
+            for(int i=0;i<12;i++)
+            {
+                monthCombo.Items.Add(i+1);
+            }
+
+            for (int i = 2017; i < 2024; i++)
+            {
+                yearCombo.Items.Add(i + 1);
+            }
         }
 
         private void bevTile_Click(object sender, EventArgs e)
@@ -71,6 +88,23 @@ namespace Foodie
         {
             menuTab.SelectTab(3);
         }
+
+        /*Check out tile & functionality */
+        private void checkOutTile_Click(object sender, EventArgs e)
+        {
+            menuTab.SelectTab(5);
+            fullnametxtBox.Text = "Full name";
+            cardtxtBox.Text = "Card Number";
+            zipcode.Text = "Zip code";
+            cvvtxtBox.Text = "CVV/CVC";
+
+            _TypedIntoCVV= _TypedIntoCard =_TypedIntoName = _TypedIntoZip=false;
+
+            lblPaytotal.Text = totalSubtotal.ToString("$0.00");
+
+    }
+
+        /*****************************************************END OF CHECK OUT FUNCTIONALITY**************************************/
 
         /* Remove button for order
         */
@@ -338,5 +372,102 @@ namespace Foodie
             return taxedamount;
         }
 
+        private void materialSingleLineTextField1_Click(object sender, EventArgs e)
+        {
+            fullnametxtBox.Text = "";
+        }
+
+
+        /*Events*/
+
+        private void cvvtxtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            _TypedIntoCVV = true;
+        }
+
+        private void cardtxtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            _TypedIntoCard = true;
+
+        }
+
+        private void fullnametxtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar);
+            _TypedIntoName = true;
+        }
+
+        private void zipcode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            _TypedIntoZip = true;
+        }
+
+        private void fullnametxtBox_TextChanged(object sender, EventArgs e)
+        {
+            _TypedIntoName = !String.IsNullOrEmpty(fullnametxtBox.Text);
+            _TypedIntoName = true;
+        }
+
+        private void fullnametxtBox_Click(object sender, EventArgs e)
+        {
+            if (!_TypedIntoName) { fullnametxtBox.Text = ""; }
+        }
+
+        private void cardtxtBox_TextChanged(object sender, EventArgs e)
+        {
+            _TypedIntoCard = !String.IsNullOrEmpty(cardtxtBox.Text);
+        }
+
+        private void cvvtxtBox_TextChanged(object sender, EventArgs e)
+        {
+            _TypedIntoCVV = !String.IsNullOrEmpty(cvvtxtBox.Text);
+        }
+
+        private void zipcode_TextChanged(object sender, EventArgs e)
+        {
+            _TypedIntoZip = !String.IsNullOrEmpty(zipcode.Text);
+        }
+
+        private void cardtxtBox_Click(object sender, EventArgs e)
+        {
+            if (!_TypedIntoCard) { cardtxtBox.Text = ""; }
+        }
+
+        private void cvvtxtBox_Click(object sender, EventArgs e)
+        {
+            if (!_TypedIntoCVV) { cvvtxtBox.Text = ""; }
+        }
+
+        private void zipcode_Click(object sender, EventArgs e)
+        {
+            if (!_TypedIntoZip) { zipcode.Text = ""; }
+        }
+
+        private void cvvtxtBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (cvvtxtBox.Text.Length == 0) return;
+
+            // Validate text, cancel when not valid and show error to user
+            if (cvvtxtBox.Text.Length > 4)
+            {
+                e.Cancel = true;
+                MessageBox.Show("CVV is only 4-digits");
+            }
+        }
+
+        private void zipcode_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (zipcode.Text.Length == 0) return;
+
+            // Validate text, cancel when not valid and show error to user
+            if (zipcode.Text.Length > 5)
+            {
+                e.Cancel = true;
+                MessageBox.Show("CVV is only 4-digits");
+            }
+        }
     }
 }
