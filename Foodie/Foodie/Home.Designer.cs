@@ -45,7 +45,6 @@
             this.lemonPic = new System.Windows.Forms.PictureBox();
             this.materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
             this.appTab = new MetroFramework.Controls.MetroTabPage();
-            this.addbtnPastries = new MaterialSkin.Controls.MaterialRaisedButton();
             this.addbtnShrimp = new MaterialSkin.Controls.MaterialRaisedButton();
             this.addbtnTomatoes = new MaterialSkin.Controls.MaterialRaisedButton();
             this.addbtnMeatball = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -87,6 +86,14 @@
             this.chocakePic = new System.Windows.Forms.PictureBox();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             this.waiterTab = new MetroFramework.Controls.MetroTabPage();
+            this.waiterlbl = new MetroFramework.Controls.MetroLabel();
+            this.reqbtnComplete = new MaterialSkin.Controls.MaterialFlatButton();
+            this.callbtnWaiter = new MaterialSkin.Controls.MaterialFlatButton();
+            this.checkNapkins = new MaterialSkin.Controls.MaterialCheckBox();
+            this.saltpeppCheck = new MaterialSkin.Controls.MaterialCheckBox();
+            this.otherCheck = new MaterialSkin.Controls.MaterialCheckBox();
+            this.checkRefill = new MaterialSkin.Controls.MaterialCheckBox();
+            this.waiterSpinner = new MetroFramework.Controls.MetroProgressSpinner();
             this.bevTile = new MetroFramework.Controls.MetroTile();
             this.appTile = new MetroFramework.Controls.MetroTile();
             this.entTile = new MetroFramework.Controls.MetroTile();
@@ -94,17 +101,13 @@
             this.waiterTile = new MetroFramework.Controls.MetroTile();
             this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.orderListView = new MetroFramework.Controls.MetroListView();
+            this.colitem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colprice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.removeBtn = new MetroFramework.Controls.MetroTile();
             this.logoFoodie = new System.Windows.Forms.PictureBox();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
-            this.waiterSpinner = new MetroFramework.Controls.MetroProgressSpinner();
-            this.checkRefill = new MaterialSkin.Controls.MaterialCheckBox();
-            this.otherCheck = new MaterialSkin.Controls.MaterialCheckBox();
-            this.saltpeppCheck = new MaterialSkin.Controls.MaterialCheckBox();
-            this.checkNapkins = new MaterialSkin.Controls.MaterialCheckBox();
-            this.callbtnWaiter = new MaterialSkin.Controls.MaterialFlatButton();
-            this.reqbtnComplete = new MaterialSkin.Controls.MaterialFlatButton();
-            this.waiterlbl = new MetroFramework.Controls.MetroLabel();
+            this.btnBreadapp = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialDivider6 = new MaterialSkin.Controls.MaterialDivider();
             this.menuTab.SuspendLayout();
             this.bevTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cokePic)).BeginInit();
@@ -323,18 +326,18 @@
             // 
             // materialDivider3
             // 
-            this.materialDivider3.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.materialDivider3.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.materialDivider3.Depth = 0;
-            this.materialDivider3.Location = new System.Drawing.Point(-182, 543);
+            this.materialDivider3.Location = new System.Drawing.Point(-4, 553);
             this.materialDivider3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider3.Name = "materialDivider3";
-            this.materialDivider3.Size = new System.Drawing.Size(1373, 27);
+            this.materialDivider3.Size = new System.Drawing.Size(859, 14);
             this.materialDivider3.TabIndex = 10;
             this.materialDivider3.Text = "materialDivider3";
             // 
             // appTab
             // 
-            this.appTab.Controls.Add(this.addbtnPastries);
+            this.appTab.Controls.Add(this.btnBreadapp);
             this.appTab.Controls.Add(this.addbtnShrimp);
             this.appTab.Controls.Add(this.addbtnTomatoes);
             this.appTab.Controls.Add(this.addbtnMeatball);
@@ -357,19 +360,6 @@
             this.appTab.VerticalScrollbarBarColor = true;
             this.appTab.VerticalScrollbarHighlightOnWheel = false;
             this.appTab.VerticalScrollbarSize = 10;
-            // 
-            // addbtnPastries
-            // 
-            this.addbtnPastries.Depth = 0;
-            this.addbtnPastries.Location = new System.Drawing.Point(26, 516);
-            this.addbtnPastries.MouseState = MaterialSkin.MouseState.HOVER;
-            this.addbtnPastries.Name = "addbtnPastries";
-            this.addbtnPastries.Primary = true;
-            this.addbtnPastries.Size = new System.Drawing.Size(266, 42);
-            this.addbtnPastries.TabIndex = 13;
-            this.addbtnPastries.Text = "ADD TO ORDER";
-            this.addbtnPastries.UseVisualStyleBackColor = true;
-            this.addbtnPastries.Click += new System.EventHandler(this.addbtnPastries_Click);
             // 
             // addbtnShrimp
             // 
@@ -498,12 +488,12 @@
             // 
             // materialDivider4
             // 
-            this.materialDivider4.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.materialDivider4.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.materialDivider4.Depth = 0;
-            this.materialDivider4.Location = new System.Drawing.Point(-156, 545);
+            this.materialDivider4.Location = new System.Drawing.Point(3, 557);
             this.materialDivider4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider4.Name = "materialDivider4";
-            this.materialDivider4.Size = new System.Drawing.Size(1373, 22);
+            this.materialDivider4.Size = new System.Drawing.Size(852, 10);
             this.materialDivider4.TabIndex = 10;
             this.materialDivider4.Text = "materialDivider4";
             // 
@@ -673,12 +663,12 @@
             // 
             // materialDivider5
             // 
-            this.materialDivider5.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.materialDivider5.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.materialDivider5.Depth = 0;
-            this.materialDivider5.Location = new System.Drawing.Point(-156, 539);
+            this.materialDivider5.Location = new System.Drawing.Point(-43, 558);
             this.materialDivider5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider5.Name = "materialDivider5";
-            this.materialDivider5.Size = new System.Drawing.Size(1373, 35);
+            this.materialDivider5.Size = new System.Drawing.Size(923, 16);
             this.materialDivider5.TabIndex = 10;
             this.materialDivider5.Text = "materialDivider5";
             // 
@@ -848,12 +838,12 @@
             // 
             // materialDivider2
             // 
-            this.materialDivider2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.materialDivider2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.materialDivider2.Depth = 0;
-            this.materialDivider2.Location = new System.Drawing.Point(-156, 542);
+            this.materialDivider2.Location = new System.Drawing.Point(-156, 554);
             this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider2.Name = "materialDivider2";
-            this.materialDivider2.Size = new System.Drawing.Size(1373, 42);
+            this.materialDivider2.Size = new System.Drawing.Size(1373, 30);
             this.materialDivider2.TabIndex = 10;
             this.materialDivider2.Text = "materialDivider2";
             // 
@@ -867,6 +857,7 @@
             this.waiterTab.Controls.Add(this.otherCheck);
             this.waiterTab.Controls.Add(this.checkRefill);
             this.waiterTab.Controls.Add(this.waiterSpinner);
+            this.waiterTab.Controls.Add(this.materialDivider6);
             this.waiterTab.HorizontalScrollbarBarColor = true;
             this.waiterTab.HorizontalScrollbarHighlightOnWheel = false;
             this.waiterTab.HorizontalScrollbarSize = 10;
@@ -877,6 +868,117 @@
             this.waiterTab.VerticalScrollbarBarColor = true;
             this.waiterTab.VerticalScrollbarHighlightOnWheel = false;
             this.waiterTab.VerticalScrollbarSize = 10;
+            // 
+            // waiterlbl
+            // 
+            this.waiterlbl.AutoSize = true;
+            this.waiterlbl.Location = new System.Drawing.Point(471, 273);
+            this.waiterlbl.Name = "waiterlbl";
+            this.waiterlbl.Size = new System.Drawing.Size(81, 19);
+            this.waiterlbl.TabIndex = 10;
+            this.waiterlbl.Text = "metroLabel1";
+            // 
+            // reqbtnComplete
+            // 
+            this.reqbtnComplete.AutoSize = true;
+            this.reqbtnComplete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.reqbtnComplete.Depth = 0;
+            this.reqbtnComplete.Location = new System.Drawing.Point(516, 365);
+            this.reqbtnComplete.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.reqbtnComplete.MouseState = MaterialSkin.MouseState.HOVER;
+            this.reqbtnComplete.Name = "reqbtnComplete";
+            this.reqbtnComplete.Primary = false;
+            this.reqbtnComplete.Size = new System.Drawing.Size(154, 36);
+            this.reqbtnComplete.TabIndex = 9;
+            this.reqbtnComplete.Text = "Request Completed";
+            this.reqbtnComplete.UseVisualStyleBackColor = true;
+            this.reqbtnComplete.Click += new System.EventHandler(this.reqbtnComplete_Click);
+            // 
+            // callbtnWaiter
+            // 
+            this.callbtnWaiter.AutoSize = true;
+            this.callbtnWaiter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.callbtnWaiter.Depth = 0;
+            this.callbtnWaiter.Location = new System.Drawing.Point(78, 365);
+            this.callbtnWaiter.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.callbtnWaiter.MouseState = MaterialSkin.MouseState.HOVER;
+            this.callbtnWaiter.Name = "callbtnWaiter";
+            this.callbtnWaiter.Primary = false;
+            this.callbtnWaiter.Size = new System.Drawing.Size(98, 36);
+            this.callbtnWaiter.TabIndex = 7;
+            this.callbtnWaiter.Text = "Call Waiter";
+            this.callbtnWaiter.UseVisualStyleBackColor = true;
+            this.callbtnWaiter.Click += new System.EventHandler(this.callbtnWaiter_Click);
+            // 
+            // checkNapkins
+            // 
+            this.checkNapkins.Depth = 0;
+            this.checkNapkins.Font = new System.Drawing.Font("Roboto", 10F);
+            this.checkNapkins.Location = new System.Drawing.Point(52, 73);
+            this.checkNapkins.Margin = new System.Windows.Forms.Padding(0);
+            this.checkNapkins.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.checkNapkins.MouseState = MaterialSkin.MouseState.HOVER;
+            this.checkNapkins.Name = "checkNapkins";
+            this.checkNapkins.Ripple = true;
+            this.checkNapkins.Size = new System.Drawing.Size(172, 30);
+            this.checkNapkins.TabIndex = 6;
+            this.checkNapkins.Text = "Napkins";
+            this.checkNapkins.UseVisualStyleBackColor = true;
+            // 
+            // saltpeppCheck
+            // 
+            this.saltpeppCheck.Depth = 0;
+            this.saltpeppCheck.Font = new System.Drawing.Font("Roboto", 10F);
+            this.saltpeppCheck.Location = new System.Drawing.Point(52, 129);
+            this.saltpeppCheck.Margin = new System.Windows.Forms.Padding(0);
+            this.saltpeppCheck.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.saltpeppCheck.MouseState = MaterialSkin.MouseState.HOVER;
+            this.saltpeppCheck.Name = "saltpeppCheck";
+            this.saltpeppCheck.Ripple = true;
+            this.saltpeppCheck.Size = new System.Drawing.Size(172, 30);
+            this.saltpeppCheck.TabIndex = 5;
+            this.saltpeppCheck.Text = "Salt/Pepper/Ketchup";
+            this.saltpeppCheck.UseVisualStyleBackColor = true;
+            // 
+            // otherCheck
+            // 
+            this.otherCheck.Depth = 0;
+            this.otherCheck.Font = new System.Drawing.Font("Roboto", 10F);
+            this.otherCheck.Location = new System.Drawing.Point(52, 191);
+            this.otherCheck.Margin = new System.Windows.Forms.Padding(0);
+            this.otherCheck.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.otherCheck.MouseState = MaterialSkin.MouseState.HOVER;
+            this.otherCheck.Name = "otherCheck";
+            this.otherCheck.Ripple = true;
+            this.otherCheck.Size = new System.Drawing.Size(172, 30);
+            this.otherCheck.TabIndex = 4;
+            this.otherCheck.Text = "other";
+            this.otherCheck.UseVisualStyleBackColor = true;
+            // 
+            // checkRefill
+            // 
+            this.checkRefill.Depth = 0;
+            this.checkRefill.Font = new System.Drawing.Font("Roboto", 10F);
+            this.checkRefill.Location = new System.Drawing.Point(52, 25);
+            this.checkRefill.Margin = new System.Windows.Forms.Padding(0);
+            this.checkRefill.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.checkRefill.MouseState = MaterialSkin.MouseState.HOVER;
+            this.checkRefill.Name = "checkRefill";
+            this.checkRefill.Ripple = true;
+            this.checkRefill.Size = new System.Drawing.Size(172, 30);
+            this.checkRefill.TabIndex = 3;
+            this.checkRefill.Text = "Refills";
+            this.checkRefill.UseVisualStyleBackColor = true;
+            // 
+            // waiterSpinner
+            // 
+            this.waiterSpinner.Location = new System.Drawing.Point(489, 24);
+            this.waiterSpinner.Maximum = 100;
+            this.waiterSpinner.Name = "waiterSpinner";
+            this.waiterSpinner.Size = new System.Drawing.Size(211, 176);
+            this.waiterSpinner.Style = MetroFramework.MetroColorStyle.Green;
+            this.waiterSpinner.TabIndex = 2;
+            this.waiterSpinner.UseSelectable = true;
             // 
             // bevTile
             // 
@@ -959,17 +1061,33 @@
             // 
             this.orderListView.AllowSorting = true;
             this.orderListView.BackColor = System.Drawing.Color.White;
+            this.orderListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colitem,
+            this.colprice});
             this.orderListView.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.orderListView.FullRowSelect = true;
-            this.orderListView.Location = new System.Drawing.Point(1040, 108);
+            this.orderListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.orderListView.Location = new System.Drawing.Point(1040, 112);
             this.orderListView.Name = "orderListView";
             this.orderListView.OwnerDraw = true;
-            this.orderListView.Size = new System.Drawing.Size(293, 455);
-            this.orderListView.Style = MetroFramework.MetroColorStyle.Red;
+            this.orderListView.Size = new System.Drawing.Size(293, 451);
+            this.orderListView.Style = MetroFramework.MetroColorStyle.Blue;
             this.orderListView.TabIndex = 6;
             this.orderListView.Theme = MetroFramework.MetroThemeStyle.Light;
             this.orderListView.UseCompatibleStateImageBehavior = false;
             this.orderListView.UseSelectable = true;
+            this.orderListView.View = System.Windows.Forms.View.Details;
+            // 
+            // colitem
+            // 
+            this.colitem.Text = "ITEM";
+            this.colitem.Width = 144;
+            // 
+            // colprice
+            // 
+            this.colprice.Text = "PRICE";
+            this.colprice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.colprice.Width = 145;
             // 
             // removeBtn
             // 
@@ -1001,120 +1119,33 @@
             this.materialDivider1.Location = new System.Drawing.Point(-1, -2);
             this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider1.Name = "materialDivider1";
-            this.materialDivider1.Size = new System.Drawing.Size(124, 674);
+            this.materialDivider1.Size = new System.Drawing.Size(123, 674);
             this.materialDivider1.TabIndex = 9;
             this.materialDivider1.Text = "materialDivider1";
             // 
-            // waiterSpinner
+            // btnBreadapp
             // 
-            this.waiterSpinner.Location = new System.Drawing.Point(466, 87);
-            this.waiterSpinner.Maximum = 100;
-            this.waiterSpinner.Name = "waiterSpinner";
-            this.waiterSpinner.Size = new System.Drawing.Size(211, 176);
-            this.waiterSpinner.Style = MetroFramework.MetroColorStyle.Green;
-            this.waiterSpinner.TabIndex = 2;
-            this.waiterSpinner.UseSelectable = true;
+            this.btnBreadapp.Depth = 0;
+            this.btnBreadapp.Location = new System.Drawing.Point(26, 516);
+            this.btnBreadapp.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnBreadapp.Name = "btnBreadapp";
+            this.btnBreadapp.Primary = true;
+            this.btnBreadapp.Size = new System.Drawing.Size(266, 42);
+            this.btnBreadapp.TabIndex = 13;
+            this.btnBreadapp.Text = "ADD TO ORDER";
+            this.btnBreadapp.UseVisualStyleBackColor = true;
+            this.btnBreadapp.Click += new System.EventHandler(this.btnBreadapp_Click);
             // 
-            // checkRefill
+            // materialDivider6
             // 
-            this.checkRefill.Depth = 0;
-            this.checkRefill.Font = new System.Drawing.Font("Roboto", 10F);
-            this.checkRefill.Location = new System.Drawing.Point(60, 87);
-            this.checkRefill.Margin = new System.Windows.Forms.Padding(0);
-            this.checkRefill.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.checkRefill.MouseState = MaterialSkin.MouseState.HOVER;
-            this.checkRefill.Name = "checkRefill";
-            this.checkRefill.Ripple = true;
-            this.checkRefill.Size = new System.Drawing.Size(172, 30);
-            this.checkRefill.TabIndex = 3;
-            this.checkRefill.Text = "Refills";
-            this.checkRefill.UseVisualStyleBackColor = true;
-            // 
-            // otherCheck
-            // 
-            this.otherCheck.Depth = 0;
-            this.otherCheck.Font = new System.Drawing.Font("Roboto", 10F);
-            this.otherCheck.Location = new System.Drawing.Point(60, 253);
-            this.otherCheck.Margin = new System.Windows.Forms.Padding(0);
-            this.otherCheck.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.otherCheck.MouseState = MaterialSkin.MouseState.HOVER;
-            this.otherCheck.Name = "otherCheck";
-            this.otherCheck.Ripple = true;
-            this.otherCheck.Size = new System.Drawing.Size(172, 30);
-            this.otherCheck.TabIndex = 4;
-            this.otherCheck.Text = "other";
-            this.otherCheck.UseVisualStyleBackColor = true;
-            // 
-            // saltpeppCheck
-            // 
-            this.saltpeppCheck.Depth = 0;
-            this.saltpeppCheck.Font = new System.Drawing.Font("Roboto", 10F);
-            this.saltpeppCheck.Location = new System.Drawing.Point(60, 191);
-            this.saltpeppCheck.Margin = new System.Windows.Forms.Padding(0);
-            this.saltpeppCheck.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.saltpeppCheck.MouseState = MaterialSkin.MouseState.HOVER;
-            this.saltpeppCheck.Name = "saltpeppCheck";
-            this.saltpeppCheck.Ripple = true;
-            this.saltpeppCheck.Size = new System.Drawing.Size(172, 30);
-            this.saltpeppCheck.TabIndex = 5;
-            this.saltpeppCheck.Text = "Salt/Pepper/Ketchup";
-            this.saltpeppCheck.UseVisualStyleBackColor = true;
-            // 
-            // checkNapkins
-            // 
-            this.checkNapkins.Depth = 0;
-            this.checkNapkins.Font = new System.Drawing.Font("Roboto", 10F);
-            this.checkNapkins.Location = new System.Drawing.Point(60, 135);
-            this.checkNapkins.Margin = new System.Windows.Forms.Padding(0);
-            this.checkNapkins.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.checkNapkins.MouseState = MaterialSkin.MouseState.HOVER;
-            this.checkNapkins.Name = "checkNapkins";
-            this.checkNapkins.Ripple = true;
-            this.checkNapkins.Size = new System.Drawing.Size(172, 30);
-            this.checkNapkins.TabIndex = 6;
-            this.checkNapkins.Text = "Napkins";
-            this.checkNapkins.UseVisualStyleBackColor = true;
-            // 
-            // callbtnWaiter
-            // 
-            this.callbtnWaiter.AutoSize = true;
-            this.callbtnWaiter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.callbtnWaiter.Depth = 0;
-            this.callbtnWaiter.Location = new System.Drawing.Point(96, 336);
-            this.callbtnWaiter.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.callbtnWaiter.MouseState = MaterialSkin.MouseState.HOVER;
-            this.callbtnWaiter.Name = "callbtnWaiter";
-            this.callbtnWaiter.Primary = false;
-            this.callbtnWaiter.Size = new System.Drawing.Size(98, 36);
-            this.callbtnWaiter.TabIndex = 7;
-            this.callbtnWaiter.Text = "Call Waiter";
-            this.callbtnWaiter.UseVisualStyleBackColor = true;
-            this.callbtnWaiter.Click += new System.EventHandler(this.callbtnWaiter_Click);
-            // 
-            // reqbtnComplete
-            // 
-            this.reqbtnComplete.AutoSize = true;
-            this.reqbtnComplete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.reqbtnComplete.Depth = 0;
-            this.reqbtnComplete.Location = new System.Drawing.Point(511, 428);
-            this.reqbtnComplete.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.reqbtnComplete.MouseState = MaterialSkin.MouseState.HOVER;
-            this.reqbtnComplete.Name = "reqbtnComplete";
-            this.reqbtnComplete.Primary = false;
-            this.reqbtnComplete.Size = new System.Drawing.Size(154, 36);
-            this.reqbtnComplete.TabIndex = 9;
-            this.reqbtnComplete.Text = "Request Completed";
-            this.reqbtnComplete.UseVisualStyleBackColor = true;
-            this.reqbtnComplete.Click += new System.EventHandler(this.reqbtnComplete_Click);
-            // 
-            // waiterlbl
-            // 
-            this.waiterlbl.AutoSize = true;
-            this.waiterlbl.Location = new System.Drawing.Point(466, 336);
-            this.waiterlbl.Name = "waiterlbl";
-            this.waiterlbl.Size = new System.Drawing.Size(81, 19);
-            this.waiterlbl.TabIndex = 10;
-            this.waiterlbl.Text = "metroLabel1";
+            this.materialDivider6.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.materialDivider6.Depth = 0;
+            this.materialDivider6.Location = new System.Drawing.Point(-53, 384);
+            this.materialDivider6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider6.Name = "materialDivider6";
+            this.materialDivider6.Size = new System.Drawing.Size(1026, 186);
+            this.materialDivider6.TabIndex = 11;
+            this.materialDivider6.Text = "materialDivider6";
             // 
             // Home
             // 
@@ -1210,7 +1241,6 @@
         private System.Windows.Forms.PictureBox churrosPic;
         private System.Windows.Forms.PictureBox bluecakePic;
         private System.Windows.Forms.PictureBox chocakePic;
-        private MaterialSkin.Controls.MaterialRaisedButton addbtnPastries;
         private MaterialSkin.Controls.MaterialRaisedButton addbtnShrimp;
         private MaterialSkin.Controls.MaterialRaisedButton addbtnTomatoes;
         private MaterialSkin.Controls.MaterialRaisedButton addbtnMeatball;
@@ -1249,6 +1279,10 @@
         private MetroFramework.Controls.MetroProgressSpinner waiterSpinner;
         private MaterialSkin.Controls.MaterialFlatButton reqbtnComplete;
         private MetroFramework.Controls.MetroLabel waiterlbl;
+        private System.Windows.Forms.ColumnHeader colitem;
+        private System.Windows.Forms.ColumnHeader colprice;
+        private MaterialSkin.Controls.MaterialRaisedButton btnBreadapp;
+        private MaterialSkin.Controls.MaterialDivider materialDivider6;
     }
 }
 
