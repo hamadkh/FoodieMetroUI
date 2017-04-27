@@ -14,8 +14,8 @@ namespace Foodie
 
         /* table details*/
         private int tableNum = 1;
+        int countnumOrders = 0;
 
-        
         /*Bevrages price*/
         private double priceNonAlcBev = 1.99;
         private double priceWine = 6.50;
@@ -47,6 +47,7 @@ namespace Foodie
         private bool _TypedIntoZip;
         private bool _TypedIntoPhone;
 
+
         public Home()
         {
             InitializeComponent();
@@ -57,7 +58,6 @@ namespace Foodie
         */
         private void Home_Load(object sender, EventArgs e)
         {
-            var time = DateTime.Now;
             Color color = ColorTranslator.FromHtml("#ffffff"); // this assumes an ARGB value 
             orderListView.BackColor = color;
             menuTab.SelectTab(0);
@@ -497,20 +497,12 @@ namespace Foodie
 
         private void payTile_Click(object sender, EventArgs e)
         {
-
-            if ((zipcode.Text != "" || cvvtxtBox.Text != "" || fullnametxtBox.Text != "" || cardtxtBox.Text != ""
-                || yearCombo.Text != "" || monthCombo.Text != "") && totalSubtotal!=0)
+            
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want complete this transaction ?", "Clear", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
             {
-                DialogResult dialogResult = MessageBox.Show("Are you sure you want complete this transaction ?", "Clear", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    MessageBox.Show("Yor receipt will be texted to you! Thankyou !");
-                    endSession();
-                }
-            }
-            else
-            {
-                MessageBox.Show("You have no amount to be paid!");
+               MessageBox.Show("Yor receipt will be texted to you! Thankyou !");
+               endSession();
             }
         }
 
@@ -527,6 +519,13 @@ namespace Foodie
                 if (dialogResult == DialogResult.Yes)
                 {
                     menuTab.SelectTab(6);
+                    orderedItemslist.Items.Add("THIS IS YOUR " + countnumOrders + " ORDER");
+                    foreach (ListViewItem item in orderListView.Items)
+                    {
+                        orderedItemslist.Items.Add(item.SubItems[0].Text);
+                    }
+                    countnumOrders++;
+                    orderListView.Items.Clear();
                 }
             }
         }
@@ -538,11 +537,11 @@ namespace Foodie
             string filename =  "receipt"+ tableNum + ".txt";
             using (StreamWriter writetext = new StreamWriter(filename))
             {
+                writetext.WriteLine(DateTime.Now);
                 writetext.WriteLine("Table No: "+tableNum);
                 writetext.WriteLine("Total: " + totalSubtotal);
                 writetext.WriteLine("Total payed with Tip: ");
-            
-                    foreach (ListViewItem o in orderListView.Items)
+                foreach (ListViewItem o in orderListView.Items)
                     {
                         writetext.WriteLine(o.ToString());
                         writetext.WriteLine(o.SubItems[1]);
