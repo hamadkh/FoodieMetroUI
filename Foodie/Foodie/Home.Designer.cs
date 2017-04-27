@@ -107,6 +107,12 @@
             this.cardtxtBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.fullnametxtBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.orderTab = new MetroFramework.Controls.MetroTabPage();
+            this.lblSubtotalorder = new MetroFramework.Controls.MetroLabel();
+            this.lblorderTax = new MetroFramework.Controls.MetroLabel();
+            this.lblordersubtotal = new MetroFramework.Controls.MetroLabel();
+            this.lbltaxorder = new MetroFramework.Controls.MetroLabel();
+            this.lblorderTotal = new MetroFramework.Controls.MetroLabel();
+            this.lbltotalorder = new MetroFramework.Controls.MetroLabel();
             this.bevTile = new MetroFramework.Controls.MetroTile();
             this.appTile = new MetroFramework.Controls.MetroTile();
             this.entTile = new MetroFramework.Controls.MetroTile();
@@ -128,9 +134,10 @@
             this.btnclearListbox = new MetroFramework.Controls.MetroTile();
             this.checkOutTile = new MetroFramework.Controls.MetroTile();
             this.orderTile = new MetroFramework.Controls.MetroTile();
+            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             this.orderedItemslist = new MetroFramework.Controls.MetroListView();
-            this.titlelbl = new MaterialSkin.Controls.MaterialLabel();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuTab.SuspendLayout();
             this.bevTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cokePic)).BeginInit();
@@ -178,7 +185,7 @@
             this.menuTab.Controls.Add(this.orderTab);
             this.menuTab.Location = new System.Drawing.Point(150, 51);
             this.menuTab.Name = "menuTab";
-            this.menuTab.SelectedIndex = 6;
+            this.menuTab.SelectedIndex = 5;
             this.menuTab.Size = new System.Drawing.Size(859, 611);
             this.menuTab.Style = MetroFramework.MetroColorStyle.Green;
             this.menuTab.TabIndex = 0;
@@ -1217,8 +1224,13 @@
             // 
             // orderTab
             // 
-            this.orderTab.Controls.Add(this.titlelbl);
             this.orderTab.Controls.Add(this.orderedItemslist);
+            this.orderTab.Controls.Add(this.lblSubtotalorder);
+            this.orderTab.Controls.Add(this.lblorderTax);
+            this.orderTab.Controls.Add(this.lblordersubtotal);
+            this.orderTab.Controls.Add(this.lbltaxorder);
+            this.orderTab.Controls.Add(this.lblorderTotal);
+            this.orderTab.Controls.Add(this.lbltotalorder);
             this.orderTab.HorizontalScrollbarBarColor = true;
             this.orderTab.HorizontalScrollbarHighlightOnWheel = false;
             this.orderTab.HorizontalScrollbarSize = 10;
@@ -1226,9 +1238,64 @@
             this.orderTab.Name = "orderTab";
             this.orderTab.Size = new System.Drawing.Size(851, 569);
             this.orderTab.TabIndex = 6;
+            this.orderTab.Text = "ORDER OVERVIEW";
             this.orderTab.VerticalScrollbarBarColor = true;
             this.orderTab.VerticalScrollbarHighlightOnWheel = false;
             this.orderTab.VerticalScrollbarSize = 10;
+            // 
+            // lblSubtotalorder
+            // 
+            this.lblSubtotalorder.AutoSize = true;
+            this.lblSubtotalorder.Location = new System.Drawing.Point(260, 479);
+            this.lblSubtotalorder.Name = "lblSubtotalorder";
+            this.lblSubtotalorder.Size = new System.Drawing.Size(40, 19);
+            this.lblSubtotalorder.TabIndex = 25;
+            this.lblSubtotalorder.Text = "$0.00";
+            // 
+            // lblorderTax
+            // 
+            this.lblorderTax.AutoSize = true;
+            this.lblorderTax.Location = new System.Drawing.Point(260, 454);
+            this.lblorderTax.Name = "lblorderTax";
+            this.lblorderTax.Size = new System.Drawing.Size(40, 19);
+            this.lblorderTax.TabIndex = 24;
+            this.lblorderTax.Text = "$0.00";
+            // 
+            // lblordersubtotal
+            // 
+            this.lblordersubtotal.AutoSize = true;
+            this.lblordersubtotal.Location = new System.Drawing.Point(19, 479);
+            this.lblordersubtotal.Name = "lblordersubtotal";
+            this.lblordersubtotal.Size = new System.Drawing.Size(64, 19);
+            this.lblordersubtotal.TabIndex = 23;
+            this.lblordersubtotal.Text = "Sub-Total";
+            // 
+            // lbltaxorder
+            // 
+            this.lbltaxorder.AutoSize = true;
+            this.lbltaxorder.Location = new System.Drawing.Point(19, 454);
+            this.lbltaxorder.Name = "lbltaxorder";
+            this.lbltaxorder.Size = new System.Drawing.Size(27, 19);
+            this.lbltaxorder.TabIndex = 22;
+            this.lbltaxorder.Text = "Tax";
+            // 
+            // lblorderTotal
+            // 
+            this.lblorderTotal.AutoSize = true;
+            this.lblorderTotal.Location = new System.Drawing.Point(260, 435);
+            this.lblorderTotal.Name = "lblorderTotal";
+            this.lblorderTotal.Size = new System.Drawing.Size(40, 19);
+            this.lblorderTotal.TabIndex = 21;
+            this.lblorderTotal.Text = "$0.00";
+            // 
+            // lbltotalorder
+            // 
+            this.lbltotalorder.AutoSize = true;
+            this.lbltotalorder.Location = new System.Drawing.Point(19, 435);
+            this.lbltotalorder.Name = "lbltotalorder";
+            this.lbltotalorder.Size = new System.Drawing.Size(36, 19);
+            this.lbltotalorder.TabIndex = 20;
+            this.lbltotalorder.Text = "Total";
             // 
             // bevTile
             // 
@@ -1471,43 +1538,45 @@
             this.orderTile.UseSelectable = true;
             this.orderTile.Click += new System.EventHandler(this.orderTile_Click);
             // 
+            // metroDateTime1
+            // 
+            this.metroDateTime1.Location = new System.Drawing.Point(815, 16);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroDateTime1.Name = "metroDateTime1";
+            this.metroDateTime1.Size = new System.Drawing.Size(194, 29);
+            this.metroDateTime1.TabIndex = 9;
+            // 
             // orderedItemslist
             // 
             this.orderedItemslist.AllowSorting = true;
             this.orderedItemslist.BackColor = System.Drawing.Color.White;
             this.orderedItemslist.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
+            this.columnHeader1,
+            this.columnHeader2});
             this.orderedItemslist.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.orderedItemslist.FullRowSelect = true;
             this.orderedItemslist.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.orderedItemslist.Location = new System.Drawing.Point(33, 85);
+            this.orderedItemslist.Location = new System.Drawing.Point(19, 23);
             this.orderedItemslist.Name = "orderedItemslist";
             this.orderedItemslist.OwnerDraw = true;
-            this.orderedItemslist.Size = new System.Drawing.Size(257, 427);
+            this.orderedItemslist.Size = new System.Drawing.Size(293, 392);
             this.orderedItemslist.Style = MetroFramework.MetroColorStyle.Green;
-            this.orderedItemslist.TabIndex = 7;
+            this.orderedItemslist.TabIndex = 20;
             this.orderedItemslist.Theme = MetroFramework.MetroThemeStyle.Light;
             this.orderedItemslist.UseCompatibleStateImageBehavior = false;
             this.orderedItemslist.UseSelectable = true;
             this.orderedItemslist.View = System.Windows.Forms.View.Details;
             // 
-            // titlelbl
-            // 
-            this.titlelbl.AutoSize = true;
-            this.titlelbl.Depth = 0;
-            this.titlelbl.Font = new System.Drawing.Font("Roboto", 11F);
-            this.titlelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.titlelbl.Location = new System.Drawing.Point(321, 23);
-            this.titlelbl.MouseState = MaterialSkin.MouseState.HOVER;
-            this.titlelbl.Name = "titlelbl";
-            this.titlelbl.Size = new System.Drawing.Size(134, 19);
-            this.titlelbl.TabIndex = 8;
-            this.titlelbl.Text = "ORDER OVERVIEW";
-            // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "ORDERED ITEMS";
-            this.columnHeader1.Width = 260;
+            this.columnHeader1.Text = "ITEM";
+            this.columnHeader1.Width = 144;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "PRICE";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 145;
             // 
             // Home
             // 
@@ -1516,6 +1585,7 @@
             this.ClientSize = new System.Drawing.Size(1368, 670);
             this.Controls.Add(this.orderTile);
             this.Controls.Add(this.checkOutTile);
+            this.Controls.Add(this.metroDateTime1);
             this.Controls.Add(this.btnclearListbox);
             this.Controls.Add(this.lblsubtotalcalc);
             this.Controls.Add(this.lbltaxcalc);
@@ -1678,9 +1748,16 @@
         private MetroFramework.Controls.MetroTabPage orderTab;
         private MetroFramework.Controls.MetroTile orderTile;
         private MaterialSkin.Controls.MaterialSingleLineTextField phonetxt;
+        private MetroFramework.Controls.MetroDateTime metroDateTime1;
+        private MetroFramework.Controls.MetroLabel lblSubtotalorder;
+        private MetroFramework.Controls.MetroLabel lblorderTax;
+        private MetroFramework.Controls.MetroLabel lblordersubtotal;
+        private MetroFramework.Controls.MetroLabel lbltaxorder;
+        private MetroFramework.Controls.MetroLabel lblorderTotal;
+        private MetroFramework.Controls.MetroLabel lbltotalorder;
         private MetroFramework.Controls.MetroListView orderedItemslist;
-        private MaterialSkin.Controls.MaterialLabel titlelbl;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }
 

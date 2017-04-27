@@ -16,6 +16,11 @@ namespace Foodie
         private int tableNum = 1;
         int countnumOrders = 0;
 
+        private double totalSumOrder=0;
+        private double totalValueOrder=0;
+        private double taxOver = 0;
+        private double subtotalOver = 0;
+
         /*Bevrages price*/
         private double priceNonAlcBev = 1.99;
         private double priceWine = 6.50;
@@ -108,7 +113,7 @@ namespace Foodie
 
             _TypedIntoCVV= _TypedIntoCard =_TypedIntoName = _TypedIntoZip=false;
 
-            lblPaytotal.Text = totalSubtotal.ToString("$0.00");
+            lblPaytotal.Text = lblSubtotalorder.Text;
 
         }
 
@@ -373,6 +378,36 @@ namespace Foodie
           
         }
 
+        private void totalOderCalculation()
+        {
+          
+            try
+            {
+                foreach (ListViewItem o in orderedItemslist.Items)
+                {
+                    if (double.TryParse(o.SubItems[1].Text, out totalValueOrder))
+                    {
+                        totalSumOrder += totalValueOrder;
+                    }
+
+                }
+
+                lblorderTotal.Text = totalSumOrder.ToString("$0.00");
+
+                taxOver = Tax(totalSumOrder);
+                lblorderTax.Text = taxOver.ToString("$0.00");
+
+                subtotalOver = totalSumOrder + taxOver;
+                lblSubtotalorder.Text = subtotalOver.ToString("$0.00");
+
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
+
         private double Tax(double total)
         {
             double taxedamount=0;
@@ -519,15 +554,18 @@ namespace Foodie
                 if (dialogResult == DialogResult.Yes)
                 {
                     menuTab.SelectTab(6);
-                    orderedItemslist.Items.Add("THIS IS YOUR " + countnumOrders + " ORDER");
+                    //orderedItemslist.Items.Add("THIS IS YOUR " + countnumOrders + " ORDER");
                     foreach (ListViewItem item in orderListView.Items)
                     {
-                        orderedItemslist.Items.Add(item.SubItems[0].Text);
+                        orderedItemslist.Items.Add(new ListViewItem(new string[] {item.SubItems[0].Text, item.SubItems[1].Text }));
                     }
                     countnumOrders++;
                     orderListView.Items.Clear();
+                    totalCalculations();
+                    totalOderCalculation();
                 }
             }
+
         }
 
         /*********************************************************************END OF ORDER ***********************************************************************/
@@ -552,6 +590,5 @@ namespace Foodie
             orderListView.Items.Clear();
             totalCalculations();
         }
-
     }
 }
